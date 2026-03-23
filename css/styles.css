@@ -191,7 +191,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   filter: blur(1.5px);
   transform: scale(1.05);
   transition: opacity 2s ease;
