@@ -1,13 +1,5 @@
 <svg viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="192" height="192" rx="38" fill="#0D0D0F" />
   <path d="M96 28L38 54v50c0 34 22 56 58 68 36-12 58-34 58-68V54L96 28z" fill="#1A1A1E" stroke="#C9B896" stroke-width="4.5" />
-  <!-- Calligraphic S — base curve -->
-  <path d="M118 60 C116 46, 106 40, 94 42 C80 44, 68 58, 70 72 C72 82, 86 88, 96 94 C110 102, 118 118, 108 128 C98 138, 82 136, 76 122"
-    stroke="#C9B896" stroke-width="10" stroke-linecap="round" fill="none" />
-  <!-- Thick overlay — upper-left bowl -->
-  <path d="M94 42 C80 44, 68 58, 70 72"
-    stroke="#C9B896" stroke-width="17" stroke-linecap="round" fill="none" />
-  <!-- Thick overlay — lower-right bowl -->
-  <path d="M96 94 C110 102, 118 118, 108 128"
-    stroke="#C9B896" stroke-width="17" stroke-linecap="round" fill="none" />
+  <text x="96" y="112" text-anchor="middle" fill="#C9B896" font-family="Georgia, serif" font-weight="bold" font-size="44" letter-spacing="2">SF</text>
 </svg>
