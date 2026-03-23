@@ -23,7 +23,7 @@ Build a Progressive Web App style family portal called "Stevens Family" with a m
 
 **Typography**: Playfair Display (headings) + Plus Jakarta Sans (body)
 
-**Branding**: Shield crest with clean serif "SF" monogram, STEVENS as primary identity
+**Branding**: Shield crest with single bold serif "S" monogram, STEVENS as primary identity
 
 ## What's Been Implemented
 **Date: March 2026**
