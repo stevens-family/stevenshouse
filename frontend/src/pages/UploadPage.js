@@ -5,19 +5,19 @@ const UploadPage = () => {
   const uploadFolderUrl = "https://drive.google.com/drive/folders/YOUR_UPLOAD_FOLDER_ID";
 
   return (
-    <PageLayout title="Upload Photos">
-      <div className="space-y-6" data-testid="upload-page">
+    <PageLayout title="Add Memories">
+      <div className="space-y-8" data-testid="upload-page">
         {/* Main Upload Card */}
-        <div className="bg-surface-light dark:bg-surface-dark rounded-3xl p-8 shadow-sm text-center">
-          <div className="p-4 rounded-full bg-primary/20 w-fit mx-auto mb-4">
-            <CloudUpload className="text-primary" size={40} />
+        <div className="luxury-card p-8 text-center">
+          <div className="w-16 h-16 rounded-2xl bg-gold-dim flex items-center justify-center mx-auto mb-6">
+            <CloudUpload className="text-gold" size={32} strokeWidth={1.5} />
           </div>
           
-          <h2 className="font-heading font-bold text-xl text-text-primary dark:text-dark-primary mb-2">
+          <h2 className="font-heading font-bold text-primary text-2xl mb-2">
             Share Your Photos
           </h2>
-          <p className="text-sm text-text-secondary dark:text-dark-secondary mb-6 max-w-sm mx-auto">
-            Add new photos to our family collection. Upload directly to our shared Google Drive folder.
+          <p className="text-secondary mb-6 max-w-md mx-auto">
+            Add new photos to our family collection. Upload directly to our shared folder.
           </p>
           
           <a
@@ -25,7 +25,7 @@ const UploadPage = () => {
             target="_blank"
             rel="noopener noreferrer"
             data-testid="upload-drive-link"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-full font-bold hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-[var(--bg-primary)] rounded-lg font-bold hover:opacity-90 transition-luxury"
           >
             <Upload size={20} />
             Open Upload Folder
@@ -34,53 +34,48 @@ const UploadPage = () => {
 
         {/* Quick Tips */}
         <div className="grid grid-cols-2 gap-4">
-          <div className="bg-secondary/20 dark:bg-secondary/30 rounded-3xl p-5">
-            <div className="p-2 rounded-xl bg-secondary/30 w-fit mb-3">
-              <Camera className="text-secondary" size={20} />
+          <div className="luxury-card p-5">
+            <div className="w-10 h-10 rounded-xl bg-[var(--bg-secondary)] flex items-center justify-center mb-4">
+              <Camera className="text-secondary" size={20} strokeWidth={1.5} />
             </div>
-            <h3 className="font-heading font-bold text-sm text-text-primary dark:text-dark-primary">
+            <h3 className="font-heading font-bold text-primary text-sm mb-1">
               From Phone
             </h3>
-            <p className="text-xs text-text-secondary dark:text-dark-secondary mt-1">
-              Upload photos directly from your camera roll
+            <p className="text-secondary text-xs">
+              Upload from camera roll
             </p>
           </div>
 
-          <div className="bg-accent/20 dark:bg-accent/30 rounded-3xl p-5">
-            <div className="p-2 rounded-xl bg-accent/40 w-fit mb-3">
-              <FolderUp className="text-accent" size={20} />
+          <div className="luxury-card p-5">
+            <div className="w-10 h-10 rounded-xl bg-[var(--bg-secondary)] flex items-center justify-center mb-4">
+              <FolderUp className="text-secondary" size={20} strokeWidth={1.5} />
             </div>
-            <h3 className="font-heading font-bold text-sm text-text-primary dark:text-dark-primary">
+            <h3 className="font-heading font-bold text-primary text-sm mb-1">
               Multiple Files
             </h3>
-            <p className="text-xs text-text-secondary dark:text-dark-secondary mt-1">
-              Select multiple photos at once
+            <p className="text-secondary text-xs">
+              Select multiple photos
             </p>
           </div>
         </div>
 
         {/* Instructions */}
-        <div className="bg-surface-light dark:bg-surface-dark rounded-3xl p-6 shadow-sm">
-          <h3 className="font-heading font-bold text-text-primary dark:text-dark-primary mb-4">
-            How to Upload
-          </h3>
-          <ol className="text-sm text-text-secondary dark:text-dark-secondary space-y-3">
-            <li className="flex gap-3">
-              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-xs">1</span>
-              <span>Click "Open Upload Folder" above</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-xs">2</span>
-              <span>Sign in to Google if prompted</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-xs">3</span>
-              <span>Click the "+ New" button in Google Drive</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-xs">4</span>
-              <span>Select "File upload" and choose your photos</span>
-            </li>
+        <div className="luxury-card p-6">
+          <h3 className="font-heading font-bold text-primary mb-4">How to Upload</h3>
+          <ol className="text-secondary text-sm space-y-3">
+            {[
+              'Click "Open Upload Folder" above',
+              'Sign in to Google if prompted',
+              'Click the "+ New" button in Google Drive',
+              'Select "File upload" and choose your photos'
+            ].map((step, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-gold-dim text-gold flex items-center justify-center text-xs font-bold">
+                  {index + 1}
+                </span>
+                <span className="pt-0.5">{step}</span>
+              </li>
+            ))}
           </ol>
         </div>
       </div>

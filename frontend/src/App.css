@@ -1,15 +1,11 @@
-/* App-specific styles */
+/* App-level styles */
 .App {
   min-height: 100vh;
   min-height: 100dvh;
+  background-color: var(--bg-primary);
 }
 
-/* Ensure proper dark mode handling */
-.dark .App {
-  background-color: #1D1D1F;
-}
-
-/* Touch optimization for mobile */
+/* Touch optimization */
 @media (hover: none) and (pointer: coarse) {
   button, a, [role="button"] {
     min-height: 44px;
@@ -24,58 +20,85 @@ button, a {
   user-select: none;
 }
 
-/* Smooth page transitions */
+/* Page transitions */
 .page-enter {
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(16px);
 }
 
 .page-enter-active {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-/* Grid layout for dashboard */
+/* Dashboard grid */
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 16px;
 }
 
 @media (min-width: 768px) {
   .dashboard-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 }
 
-/* Card hover effects */
-.tile-card {
-  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
-              box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+@media (min-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
 }
 
-.tile-card:hover {
-  transform: scale(1.02);
-}
-
+/* Tile active state */
 .tile-card:active {
   transform: scale(0.98);
 }
 
-/* Bottom navigation glass effect */
-.nav-glass {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+/* Gold accent line animation */
+.gold-line-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-line-hover::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.gold-line-hover:hover::before {
+  width: 100%;
+}
+
+/* Iframe container */
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: var(--bg-secondary);
+}
+
+.iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* Loading spinner */
 .spinner {
-  width: 40px;
-  height: 40px;
-  border: 3px solid rgba(224, 122, 95, 0.2);
-  border-top-color: #E07A5F;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--border-subtle);
+  border-top-color: var(--gold);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -86,30 +109,24 @@ button, a {
   }
 }
 
-/* Iframe container */
-.iframe-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: 1.5rem;
-}
-
-.iframe-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* Pull to refresh indicator */
-.pull-indicator {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 1rem;
+/* Menu dropdown animation */
+.menu-enter {
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transform: translateY(-8px);
 }
 
-.pull-indicator.visible {
+.menu-enter-active {
   opacity: 1;
+  transform: translateY(0);
+  transition: all 0.2s ease;
+}
+
+.menu-exit {
+  opacity: 1;
+}
+
+.menu-exit-active {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: all 0.2s ease;
 }

@@ -5,65 +5,51 @@ const ActivitiesPage = () => {
   const activitiesDocUrl = "https://docs.google.com/document/d/YOUR_ACTIVITIES_DOC_ID/edit";
 
   const activityCategories = [
-    { 
-      icon: Gamepad2, 
-      name: "Indoor Fun", 
-      description: "Board games, movies, crafts",
-      color: "bg-primary/20",
-      iconColor: "text-primary"
-    },
-    { 
-      icon: TreePine, 
-      name: "Outdoor Adventures", 
-      description: "Parks, hikes, sports",
-      color: "bg-secondary/20",
-      iconColor: "text-secondary"
-    },
-    { 
-      icon: Palette, 
-      name: "Creative Time", 
-      description: "Art projects, music, cooking",
-      color: "bg-accent/30",
-      iconColor: "text-accent"
-    },
-    { 
-      icon: BookOpen, 
-      name: "Learning", 
-      description: "Educational activities, museums",
-      color: "bg-primary/10",
-      iconColor: "text-primary"
-    },
+    { icon: Gamepad2, name: "Indoor Fun", description: "Board games, movies, crafts" },
+    { icon: TreePine, name: "Outdoor Adventures", description: "Parks, hikes, sports" },
+    { icon: Palette, name: "Creative Time", description: "Art projects, music" },
+    { icon: BookOpen, name: "Learning", description: "Educational activities" },
+  ];
+
+  const quickIdeas = [
+    "Family movie night",
+    "Backyard picnic",
+    "Board game tournament",
+    "Bake cookies together",
+    "Nature walk"
   ];
 
   return (
-    <PageLayout title="Family Activities">
-      <div className="space-y-6" data-testid="activities-page">
-        {/* Header Card */}
-        <div className="bg-gradient-to-br from-primary/20 to-secondary/20 dark:from-primary/30 dark:to-secondary/30 rounded-3xl p-8">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="p-3 rounded-2xl bg-surface-light dark:bg-surface-dark shadow-sm">
-              <Activity className="text-primary" size={24} />
+    <PageLayout title="Sports & Events">
+      <div className="space-y-8" data-testid="activities-page">
+        {/* Action Card */}
+        <div className="luxury-card p-6">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-xl bg-gold-dim flex items-center justify-center">
+                <Activity className="text-gold" size={24} strokeWidth={1.5} />
+              </div>
+              <div>
+                <h2 className="font-heading font-bold text-primary text-lg">
+                  Things to Do
+                </h2>
+                <p className="text-secondary text-sm">
+                  Family quality time ideas
+                </p>
+              </div>
             </div>
-            <div>
-              <h2 className="font-heading font-bold text-xl text-text-primary dark:text-dark-primary">
-                Things to Do
-              </h2>
-              <p className="text-sm text-text-secondary dark:text-dark-secondary">
-                Ideas for family quality time
-              </p>
-            </div>
+            
+            <a
+              href={activitiesDocUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="activities-doc-link"
+              className="flex items-center gap-2 px-4 py-2 bg-gold text-[var(--bg-primary)] rounded-lg font-semibold text-sm hover:opacity-90 transition-luxury"
+            >
+              <ExternalLink size={16} />
+              <span className="hidden sm:inline">View All</span>
+            </a>
           </div>
-          
-          <a
-            href={activitiesDocUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-testid="activities-doc-link"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-full font-bold text-sm hover:opacity-90 transition-opacity"
-          >
-            <ExternalLink size={16} />
-            View Activity List
-          </a>
         </div>
 
         {/* Activity Categories */}
@@ -74,16 +60,16 @@ const ActivitiesPage = () => {
               href={activitiesDocUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${category.color} rounded-3xl p-5 hover:scale-[1.02] transition-all`}
+              className="luxury-card p-5"
               data-testid={`activity-category-${index}`}
             >
-              <div className="p-2 rounded-xl bg-surface-light/50 dark:bg-surface-dark/50 w-fit mb-3">
-                <category.icon className={category.iconColor} size={20} />
+              <div className="w-10 h-10 rounded-xl bg-[var(--bg-secondary)] flex items-center justify-center mb-4">
+                <category.icon className="text-secondary" size={20} strokeWidth={1.5} />
               </div>
-              <h3 className="font-heading font-bold text-sm text-text-primary dark:text-dark-primary">
+              <h3 className="font-heading font-bold text-primary text-sm mb-1">
                 {category.name}
               </h3>
-              <p className="text-xs text-text-secondary dark:text-dark-secondary mt-1">
+              <p className="text-secondary text-xs">
                 {category.description}
               </p>
             </a>
@@ -91,42 +77,37 @@ const ActivitiesPage = () => {
         </div>
 
         {/* Quick Ideas */}
-        <div className="bg-surface-light dark:bg-surface-dark rounded-3xl p-6 shadow-sm">
-          <h3 className="font-heading font-bold text-text-primary dark:text-dark-primary mb-4">
-            Quick Ideas for Today
-          </h3>
-          
+        <div className="luxury-card p-6">
+          <h3 className="font-heading font-bold text-primary mb-4">Quick Ideas for Today</h3>
           <div className="space-y-3">
-            {["Family movie night", "Backyard picnic", "Board game tournament", "Bake cookies together", "Nature walk"].map((idea, index) => (
+            {quickIdeas.map((idea, index) => (
               <div 
                 key={index}
-                className="flex items-center gap-3 p-3 rounded-2xl bg-background-light dark:bg-background-dark"
+                className="flex items-center gap-3 p-3 rounded-xl bg-[var(--bg-secondary)]"
               >
-                <div className="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center">
-                  <span className="text-secondary text-sm">✦</span>
+                <div className="w-8 h-8 rounded-full bg-gold-dim flex items-center justify-center">
+                  <span className="text-gold text-sm">✦</span>
                 </div>
-                <span className="font-body text-text-primary dark:text-dark-primary">
-                  {idea}
-                </span>
+                <span className="text-primary text-sm">{idea}</span>
               </div>
             ))}
           </div>
         </div>
 
         {/* Weekend Planning */}
-        <div className="bg-accent/20 dark:bg-accent/30 rounded-3xl p-6">
-          <h3 className="font-heading font-bold text-text-primary dark:text-dark-primary mb-2">
+        <div className="p-6 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)]">
+          <h3 className="font-heading font-bold text-primary mb-2">
             Weekend Planning
           </h3>
-          <p className="text-sm text-text-secondary dark:text-dark-secondary mb-4">
-            Check our shared document for upcoming weekend plans and activity ideas from the whole family.
+          <p className="text-secondary text-sm mb-4">
+            Check our shared document for upcoming weekend plans and activity ideas.
           </p>
           <a
             href={activitiesDocUrl}
             target="_blank"
             rel="noopener noreferrer"
             data-testid="weekend-plans-link"
-            className="inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline"
+            className="inline-flex items-center gap-2 text-gold font-semibold text-sm hover:underline"
           >
             <ExternalLink size={14} />
             Plan This Weekend

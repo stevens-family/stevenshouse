@@ -1,7 +1,7 @@
 {
   "short_name": "Stevens Family",
   "name": "Stevens Family - God First. Family Always.",
-  "description": "Family Operating System dashboard for the Stevens family",
+  "description": "Family Legacy Platform - A private family operating system",
   "icons": [
     {
       "src": "icon-192.svg",
@@ -18,8 +18,8 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#E07A5F",
-  "background_color": "#F4F1DE",
+  "theme_color": "#0B0C0F",
+  "background_color": "#0B0C0F",
   "orientation": "portrait-primary",
   "scope": "/",
   "categories": ["lifestyle", "productivity"]

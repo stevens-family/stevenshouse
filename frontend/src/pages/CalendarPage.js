@@ -6,42 +6,47 @@ const CalendarPage = () => {
   const calendarLinkUrl = "https://calendar.google.com/calendar/u/0/r";
 
   return (
-    <PageLayout title="Family Calendar">
-      <div className="space-y-6" data-testid="calendar-page">
-        {/* Info Card */}
-        <div className="bg-surface-light dark:bg-surface-dark rounded-3xl p-6 shadow-sm">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="p-3 rounded-2xl bg-secondary/20">
-              <Calendar className="text-secondary" size={24} />
+    <PageLayout title="Family Schedule">
+      <div className="space-y-8" data-testid="calendar-page">
+        {/* Action Card */}
+        <div className="luxury-card p-6">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-xl bg-[var(--bg-secondary)] flex items-center justify-center">
+                <Calendar className="text-gold" size={24} strokeWidth={1.5} />
+              </div>
+              <div>
+                <h2 className="font-heading font-bold text-primary text-lg">
+                  Family Events
+                </h2>
+                <p className="text-secondary text-sm">
+                  Keep everyone in sync
+                </p>
+              </div>
             </div>
-            <div>
-              <h2 className="font-heading font-bold text-text-primary dark:text-dark-primary">
-                Family Events
-              </h2>
-              <p className="text-sm text-text-secondary dark:text-dark-secondary">
-                Stay organized together
-              </p>
-            </div>
+            
+            <a
+              href={calendarLinkUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="calendar-external-link"
+              className="flex items-center gap-2 px-4 py-2 bg-gold text-[var(--bg-primary)] rounded-lg font-semibold text-sm hover:opacity-90 transition-luxury"
+            >
+              <ExternalLink size={16} />
+              <span className="hidden sm:inline">Open Calendar</span>
+            </a>
           </div>
-          
-          <a
-            href={calendarLinkUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-testid="calendar-external-link"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-secondary text-white rounded-full font-bold text-sm hover:opacity-90 transition-opacity"
-          >
-            <ExternalLink size={16} />
-            Open in Google Calendar
-          </a>
         </div>
 
         {/* Calendar Embed */}
-        <div className="bg-surface-light dark:bg-surface-dark rounded-3xl overflow-hidden shadow-sm">
-          <div className="aspect-video md:aspect-[4/3] w-full">
+        <div className="luxury-card overflow-hidden">
+          <div className="p-4 border-b border-[var(--divider)]">
+            <span className="text-secondary text-sm font-medium">Calendar View</span>
+          </div>
+          <div className="aspect-video md:aspect-[16/10] w-full bg-secondary">
             <iframe
               src={calendarEmbedUrl}
-              title="Stevens Family Calendar"
+              title="Family Calendar"
               className="w-full h-full border-0"
               data-testid="calendar-iframe"
               style={{ minHeight: '400px' }}
@@ -50,14 +55,21 @@ const CalendarPage = () => {
         </div>
 
         {/* Instructions */}
-        <div className="bg-accent/20 dark:bg-accent/30 rounded-3xl p-6">
-          <h3 className="font-heading font-bold text-text-primary dark:text-dark-primary mb-2">
-            How to Use
-          </h3>
-          <ul className="text-sm text-text-secondary dark:text-dark-secondary space-y-2">
-            <li>View upcoming family events and appointments</li>
-            <li>Click "Open in Google Calendar" to add new events</li>
-            <li>Sync with your personal calendar for reminders</li>
+        <div className="p-6 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)]">
+          <h3 className="font-heading font-bold text-primary mb-3">Quick Tips</h3>
+          <ul className="text-secondary text-sm space-y-2">
+            <li className="flex items-start gap-2">
+              <span className="text-gold">•</span>
+              <span>View upcoming family events and appointments</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gold">•</span>
+              <span>Click "Open Calendar" to add new events</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gold">•</span>
+              <span>Sync with your personal calendar for reminders</span>
+            </li>
           </ul>
         </div>
       </div>

@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import "@/App.css";
 import { HashRouter, Routes, Route } from "react-router-dom";
-import { ThemeProvider } from "./contexts/ThemeContext";
 
 // Pages
 import Dashboard from "./pages/Dashboard";
@@ -14,7 +13,6 @@ import FindItemsPage from "./pages/FindItemsPage";
 import RecipesPage from "./pages/RecipesPage";
 import ActivitiesPage from "./pages/ActivitiesPage";
 import FinancePage from "./pages/FinancePage";
-import MorePage from "./pages/MorePage";
 
 function App() {
   useEffect(() => {
@@ -33,25 +31,22 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider>
-      <div className="App font-body">
-        <HashRouter>
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/calendar" element={<CalendarPage />} />
-            <Route path="/photos" element={<PhotosPage />} />
-            <Route path="/upload" element={<UploadPage />} />
-            <Route path="/dinner" element={<DinnerPage />} />
-            <Route path="/closet" element={<ClosetPage />} />
-            <Route path="/find-items" element={<FindItemsPage />} />
-            <Route path="/recipes" element={<RecipesPage />} />
-            <Route path="/activities" element={<ActivitiesPage />} />
-            <Route path="/finance" element={<FinancePage />} />
-            <Route path="/more" element={<MorePage />} />
-          </Routes>
-        </HashRouter>
-      </div>
-    </ThemeProvider>
+    <div className="App font-body">
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/calendar" element={<CalendarPage />} />
+          <Route path="/photos" element={<PhotosPage />} />
+          <Route path="/upload" element={<UploadPage />} />
+          <Route path="/dinner" element={<DinnerPage />} />
+          <Route path="/closet" element={<ClosetPage />} />
+          <Route path="/find-items" element={<FindItemsPage />} />
+          <Route path="/recipes" element={<RecipesPage />} />
+          <Route path="/activities" element={<ActivitiesPage />} />
+          <Route path="/finance" element={<FinancePage />} />
+        </Routes>
+      </HashRouter>
+    </div>
   );
 }
 

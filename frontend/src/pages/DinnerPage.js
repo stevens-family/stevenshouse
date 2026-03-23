@@ -7,62 +7,56 @@ const DinnerPage = () => {
   const embedUrl = "https://docs.google.com/document/d/YOUR_DINNER_DOC_ID/preview";
 
   return (
-    <PageLayout title="Dinner Tonight">
-      <div className="space-y-6" data-testid="dinner-page">
-        {/* Hero Card */}
-        <div 
-          className="relative rounded-3xl overflow-hidden shadow-sm"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-          <div className="relative p-8 text-white">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-2xl bg-white/20 backdrop-blur">
-                <UtensilsCrossed size={24} />
+    <PageLayout title="Tonight's Plan">
+      <div className="space-y-8" data-testid="dinner-page">
+        {/* Action Card */}
+        <div className="luxury-card p-6">
+          <div className="flex items-center justify-between flex-wrap gap-4">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-xl bg-gold-dim flex items-center justify-center">
+                <UtensilsCrossed className="text-gold" size={24} strokeWidth={1.5} />
               </div>
               <div>
-                <h2 className="font-heading font-bold text-xl">What's Cooking?</h2>
-                <p className="text-sm text-white/80">Family meal planning</p>
+                <h2 className="font-heading font-bold text-primary text-lg">
+                  Meal Planning
+                </h2>
+                <p className="text-secondary text-sm">
+                  What's cooking tonight?
+                </p>
               </div>
             </div>
             
-            <div className="flex gap-3 flex-wrap">
+            <div className="flex gap-2">
               <a
                 href={dinnerDocUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="dinner-doc-link"
-                className="inline-flex items-center gap-2 px-5 py-3 bg-white text-text-primary rounded-full font-bold text-sm hover:bg-white/90 transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-gold text-[var(--bg-primary)] rounded-lg font-semibold text-sm hover:opacity-90 transition-luxury"
               >
                 <ExternalLink size={16} />
-                View Meal Plan
+                <span className="hidden sm:inline">View Plan</span>
               </a>
               <a
                 href={dinnerSheetUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="dinner-sheet-link"
-                className="inline-flex items-center gap-2 px-5 py-3 bg-white/20 text-white rounded-full font-bold text-sm hover:bg-white/30 transition-colors backdrop-blur"
+                className="flex items-center gap-2 px-4 py-2 bg-[var(--bg-secondary)] text-secondary rounded-lg font-semibold text-sm hover:text-primary transition-luxury"
               >
                 <Clock size={16} />
-                Weekly Schedule
+                <span className="hidden sm:inline">Weekly</span>
               </a>
             </div>
           </div>
         </div>
 
         {/* Embedded Document */}
-        <div className="bg-surface-light dark:bg-surface-dark rounded-3xl overflow-hidden shadow-sm">
-          <div className="p-4 border-b border-black/5 dark:border-white/10">
-            <h3 className="font-heading font-bold text-text-primary dark:text-dark-primary">
-              This Week's Menu
-            </h3>
+        <div className="luxury-card overflow-hidden">
+          <div className="p-4 border-b border-[var(--divider)]">
+            <span className="text-secondary text-sm font-medium">This Week's Menu</span>
           </div>
-          <div className="aspect-[4/3] w-full">
+          <div className="aspect-[4/3] w-full bg-secondary">
             <iframe
               src={embedUrl}
               title="Dinner Menu"
@@ -73,15 +67,22 @@ const DinnerPage = () => {
           </div>
         </div>
 
-        {/* Quick Info */}
-        <div className="bg-accent/20 dark:bg-accent/30 rounded-3xl p-6">
-          <h3 className="font-heading font-bold text-text-primary dark:text-dark-primary mb-2">
-            Meal Planning Tips
-          </h3>
-          <ul className="text-sm text-text-secondary dark:text-dark-secondary space-y-2">
-            <li>Check the meal plan each morning</li>
-            <li>Anyone can suggest changes in the shared document</li>
-            <li>Link your favorite recipes from the Recipes page</li>
+        {/* Tips */}
+        <div className="p-6 rounded-xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)]">
+          <h3 className="font-heading font-bold text-primary mb-3">Meal Planning Tips</h3>
+          <ul className="text-secondary text-sm space-y-2">
+            <li className="flex items-start gap-2">
+              <span className="text-gold">•</span>
+              <span>Check the meal plan each morning</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gold">•</span>
+              <span>Anyone can suggest changes in the shared document</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gold">•</span>
+              <span>Link your favorite recipes from the Recipes page</span>
+            </li>
           </ul>
         </div>
       </div>

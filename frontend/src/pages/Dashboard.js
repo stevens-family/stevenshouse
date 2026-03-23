@@ -9,122 +9,131 @@ import {
   Activity, 
   Wallet 
 } from 'lucide-react';
-import { Navigation } from '../components/Navigation';
-import { DarkModeToggle } from '../components/DarkModeToggle';
-import { DashboardTile } from '../components/DashboardTile';
+import { Header } from '../components/Header';
+import { LuxuryTile } from '../components/LuxuryTile';
+import { SFMonogram } from '../components/SFMonogram';
+
+const tiles = [
+  { 
+    to: '/dinner', 
+    icon: UtensilsCrossed, 
+    label: 'Dinner', 
+    subtitle: "Tonight's plan",
+    testId: 'tile-dinner'
+  },
+  { 
+    to: '/calendar', 
+    icon: Calendar, 
+    label: 'Calendar', 
+    subtitle: 'Family schedule',
+    testId: 'tile-calendar'
+  },
+  { 
+    to: '/photos', 
+    icon: Image, 
+    label: 'Photos', 
+    subtitle: 'Family moments',
+    testId: 'tile-photos'
+  },
+  { 
+    to: '/upload', 
+    icon: Upload, 
+    label: 'Upload', 
+    subtitle: 'Add memories',
+    testId: 'tile-upload'
+  },
+  { 
+    to: '/closet', 
+    icon: Shirt, 
+    label: 'Closet', 
+    subtitle: 'Plan your fit',
+    testId: 'tile-closet'
+  },
+  { 
+    to: '/find-items', 
+    icon: Search, 
+    label: 'Find Items', 
+    subtitle: 'Locate anything',
+    testId: 'tile-find-items'
+  },
+  { 
+    to: '/recipes', 
+    icon: CookingPot, 
+    label: 'Recipes', 
+    subtitle: 'Family kitchen',
+    testId: 'tile-recipes'
+  },
+  { 
+    to: '/activities', 
+    icon: Activity, 
+    label: 'Activities', 
+    subtitle: 'Sports and events',
+    testId: 'tile-activities'
+  },
+  { 
+    to: '/finance', 
+    icon: Wallet, 
+    label: 'Finance', 
+    subtitle: 'Family legacy',
+    testId: 'tile-finance'
+  },
+];
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen bg-background-light dark:bg-background-dark pb-24">
-      {/* Header */}
-      <header className="sticky top-0 z-40 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg">
-        <div className="flex items-center justify-between px-6 py-6 max-w-4xl mx-auto">
-          <div>
+    <div className="min-h-screen bg-primary">
+      <Header />
+      
+      <main className="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-12">
+        {/* Hero Section */}
+        <div className="mb-12 md:mb-16 text-center md:text-left">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mb-4">
+            <div className="md:hidden">
+              <SFMonogram size="lg" />
+            </div>
             <h1 
-              className="text-2xl md:text-3xl font-bold text-text-primary dark:text-dark-primary font-heading"
+              className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-primary tracking-tight"
               data-testid="app-title"
             >
               Stevens Family
             </h1>
-            <p className="text-sm text-text-secondary dark:text-dark-secondary font-body mt-1">
+          </div>
+          
+          <div className="flex flex-col items-center md:items-start gap-3">
+            <p className="text-secondary text-lg md:text-xl font-medium tracking-wide">
               God First. Family Always.
             </p>
+            {/* Gold accent line */}
+            <div className="w-16 h-0.5 bg-gradient-to-r from-[var(--gold)] to-transparent" />
           </div>
-          <DarkModeToggle />
         </div>
-      </header>
 
-      {/* Dashboard Grid */}
-      <main className="px-4 md:px-6 max-w-4xl mx-auto">
+        {/* Dashboard Grid */}
         <div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6"
           data-testid="dashboard-grid"
         >
-          {/* Large Tile - Dinner Tonight */}
-          <DashboardTile
-            to="/dinner"
-            icon={UtensilsCrossed}
-            label="Dinner Tonight"
-            description="What's cooking?"
-            bgImage="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&q=80"
-            size="large"
-            testId="tile-dinner"
-          />
-
-          {/* Medium Tile - Calendar */}
-          <DashboardTile
-            to="/calendar"
-            icon={Calendar}
-            label="Calendar"
-            description="Family events"
-            bgColor="bg-secondary/20 dark:bg-secondary/30"
-            size="medium"
-            testId="tile-calendar"
-          />
-
-          {/* Medium Tile - Photos */}
-          <DashboardTile
-            to="/photos"
-            icon={Image}
-            label="Photos"
-            description="Family memories"
-            bgImage="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80"
-            size="medium"
-            testId="tile-photos"
-          />
-
-          {/* Small Tiles */}
-          <DashboardTile
-            to="/upload"
-            icon={Upload}
-            label="Upload"
-            bgColor="bg-primary/20 dark:bg-primary/30"
-            testId="tile-upload"
-          />
-
-          <DashboardTile
-            to="/closet"
-            icon={Shirt}
-            label="Closet"
-            bgColor="bg-accent/30 dark:bg-accent/40"
-            testId="tile-closet"
-          />
-
-          <DashboardTile
-            to="/find-items"
-            icon={Search}
-            label="Find Items"
-            bgColor="bg-secondary/20 dark:bg-secondary/30"
-            testId="tile-find-items"
-          />
-
-          <DashboardTile
-            to="/recipes"
-            icon={CookingPot}
-            label="Recipes"
-            bgImage="https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=600&q=80"
-            testId="tile-recipes"
-          />
-
-          <DashboardTile
-            to="/activities"
-            icon={Activity}
-            label="Activities"
-            bgColor="bg-primary/20 dark:bg-primary/30"
-            testId="tile-activities"
-          />
-
-          <DashboardTile
-            to="/finance"
-            icon={Wallet}
-            label="Finance"
-            bgColor="bg-accent/30 dark:bg-accent/40"
-            testId="tile-finance"
-          />
+          {tiles.map((tile) => (
+            <LuxuryTile
+              key={tile.to}
+              to={tile.to}
+              icon={tile.icon}
+              label={tile.label}
+              subtitle={tile.subtitle}
+              testId={tile.testId}
+            />
+          ))}
         </div>
-      </main>
 
-      <Navigation />
+        {/* Footer */}
+        <footer className="mt-16 md:mt-24 text-center">
+          <div className="flex items-center justify-center gap-2 text-muted text-sm">
+            <SFMonogram size="sm" withBorder={false} />
+            <span className="opacity-50">|</span>
+            <span>Family Legacy Platform</span>
+          </div>
+        </footer>
+      </main>
     </div>
   );
 };
