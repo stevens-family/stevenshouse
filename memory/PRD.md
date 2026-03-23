@@ -1,7 +1,7 @@
 # Stevens Family PWA - Product Requirements Document
 
 ## Original Problem Statement
-Build a Progressive Web App style family portal called "Stevens Family" with a modern luxury family legacy aesthetic - dark luxury theme, gold accents, strong typography.
+Build a Progressive Web App style family portal called "Stevens Family" with a modern luxury family legacy aesthetic - dark luxury theme, gold accents, strong typography. Installable on phone home screen, static site for GitHub Pages.
 
 ## User Personas
 - **Primary**: Modern family dynasty - parents and children
@@ -9,28 +9,27 @@ Build a Progressive Web App style family portal called "Stevens Family" with a m
 
 ## Core Requirements (Static)
 - PWA with manifest.json and service worker
-- Luxury dark theme with gold accents
+- Luxury dark theme with gold accents + light/dark mode toggle
 - Mobile-first, app-like design
 - No backend/database/auth (Google handles access)
 - GitHub Pages compatible (HashRouter)
 
 ## Design System
-**Theme**: Dark Luxury
-- Background: #0B0C0F (rich black)
-- Card: #171A20
-- Text Primary: #F5F5F5
-- Text Secondary: #A7AAB3
-- Gold Accent: #C6A85A (used sparingly)
+**Theme**: Dark Luxury + Light Mode
+- Dark BG: #0D0D0F | Light BG: #FDFCFA
+- Card Dark: #16161A | Card Light: #FFFFFF
+- Gold Accent: #C9B896 (dark) / #8B7D5E (light)
+- Text Primary Dark: #F0EDE6 | Light: #1A1A1A
 
-**Typography**: Plus Jakarta Sans (headings) + Inter (body)
+**Typography**: Playfair Display (headings) + Plus Jakarta Sans (body)
 
-**Branding**: SF Monogram with gold border
+**Branding**: Clean shield crest (no letter/monogram), STEVENS as primary identity
 
-## What's Been Implemented ✅
+## What's Been Implemented
 **Date: March 2026**
 
 ### Pages (10 total)
-1. Dashboard - Luxury dark tiles with gold hover effects
+1. Dashboard - Hero with clean crest + STEVENS typography + tile grid
 2. Calendar - Family schedule with Google Calendar embed
 3. Photos - Family moments with Drive link
 4. Upload - Add memories to shared folder
@@ -42,33 +41,34 @@ Build a Progressive Web App style family portal called "Stevens Family" with a m
 10. Finance - Family legacy budget
 
 ### Features
-- ✅ Dark luxury theme (#0B0C0F background)
-- ✅ SF monogram logo with gold border
-- ✅ Sticky top navigation with dropdown menu
-- ✅ Gold hover effects on tiles (lift + gold border)
-- ✅ Plus Jakarta Sans + Inter typography
-- ✅ PWA manifest with dark theme colors
-- ✅ Service worker for offline shell
-- ✅ Mobile-first responsive design
-- ✅ Minimal line icons (Lucide)
-- ✅ No emojis, no stock photos on tiles
+- Clean shield crest logo (no monogram letter)
+- STEVENS as bold hero typography identity
+- Light/dark mode toggle with localStorage persistence
+- Rotating hero background with family photos
+- 9 styled dashboard tiles with gold hover effects
+- Sticky header with navigation dropdown
+- Back navigation on all sub-pages
+- PWA manifest + service worker
+- Mobile responsive design
+- Playfair Display + Plus Jakarta Sans typography
+
+### Bug Fixes
+- Fixed sub-page crash (ThemeProvider wrapping issue) - Verified working
+- Multiple logo redesign iterations based on user feedback
 
 ## Prioritized Backlog
 
-### P0 (Critical for Launch)
-- ✅ All complete
-
 ### P1 (High Priority)
-- Replace placeholder Google URLs with actual links
-- Deploy to GitHub Pages
-- Test PWA install on devices
+- Replace placeholder Google URLs with actual Calendar/Drive/Sheets links
+- Deploy to GitHub Pages (yarn build + gh-pages branch)
+- Test PWA install on iOS and Android devices
 
 ### P2 (Nice to Have)
-- Add gold accent animations on page load
-- Implement subtle parallax effects
-- Add family member avatars section
+- Gold accent animations on page load
+- Subtle parallax effects
+- Family member avatars section
 
 ## Next Tasks
 1. User to provide actual Google Calendar/Drive/Sheets URLs
 2. Configure custom domain (stevensfamily.god-1st.com)
-3. Test PWA install on iOS and Android
+3. Test PWA install on mobile devices
