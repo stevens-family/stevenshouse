@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { SFMonogram } from './SFMonogram';
+import { HeaderLogo } from './FamilyLogo';
 
 const menuItems = [
   { path: '/', label: 'Home' },
@@ -31,22 +31,12 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0D0D0F]/95 backdrop-blur-md border-b border-[#1F1F23]">
+    <header className="sticky top-0 z-50 bg-[#0D0D0F]/90 backdrop-blur-md border-b border-[#1F1F23]">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between h-16 md:h-18">
+        <div className="flex items-center justify-between h-14 md:h-16">
           {/* Logo */}
-          <Link 
-            to="/" 
-            className="flex items-center gap-3 transition-all duration-300 hover:opacity-80"
-            data-testid="header-logo"
-          >
-            <SFMonogram size="sm" variant="stacked" />
-            <span 
-              className="font-medium text-base text-[#E8DCC4] tracking-wide hidden sm:block"
-              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontWeight: 500 }}
-            >
-              Stevens Family
-            </span>
+          <Link to="/" className="transition-opacity hover:opacity-80">
+            <HeaderLogo />
           </Link>
 
           {/* Menu Button */}
@@ -71,7 +61,6 @@ export const Header = () => {
             {isMenuOpen && (
               <div 
                 className="absolute right-0 top-full mt-2 w-48 bg-[#16161A] border border-[#232328] rounded-xl shadow-2xl overflow-hidden animate-fadeIn"
-                style={{ boxShadow: '0 16px 48px rgba(0,0,0,0.4)' }}
                 data-testid="nav-dropdown"
               >
                 <div className="py-2">
@@ -81,12 +70,11 @@ export const Header = () => {
                       <Link
                         key={item.path}
                         to={item.path}
-                        className={`block px-4 py-2.5 transition-all duration-300 ${
+                        className={`block px-4 py-2.5 text-sm transition-all duration-300 ${
                           isActive 
                             ? 'bg-[#1F1E1A] text-[#C9B896]' 
                             : 'text-[#908C84] hover:text-[#D8D4CC] hover:bg-[#1A1A1E]'
                         }`}
-                        style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif", fontSize: '14px' }}
                         data-testid={`nav-${item.label.toLowerCase()}`}
                       >
                         {item.label}
