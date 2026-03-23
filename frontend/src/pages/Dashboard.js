@@ -1,14 +1,3 @@
-import { 
-  UtensilsCrossed, 
-  Calendar, 
-  Image, 
-  Upload, 
-  Shirt, 
-  Search, 
-  CookingPot, 
-  Activity, 
-  Wallet 
-} from 'lucide-react';
 import { Header } from '../components/Header';
 import { LuxuryTile } from '../components/LuxuryTile';
 import { SFMonogram } from '../components/SFMonogram';
@@ -17,63 +6,63 @@ import { HeroBackground } from '../components/HeroBackground';
 const tiles = [
   { 
     to: '/dinner', 
-    icon: UtensilsCrossed, 
+    iconType: 'dinner',
     label: 'Dinner', 
     subtitle: "Tonight's plan",
     testId: 'tile-dinner'
   },
   { 
     to: '/calendar', 
-    icon: Calendar, 
+    iconType: 'calendar',
     label: 'Calendar', 
     subtitle: 'Family schedule',
     testId: 'tile-calendar'
   },
   { 
     to: '/photos', 
-    icon: Image, 
+    iconType: 'photos',
     label: 'Photos', 
     subtitle: 'Family moments',
     testId: 'tile-photos'
   },
   { 
     to: '/upload', 
-    icon: Upload, 
+    iconType: 'upload',
     label: 'Upload', 
     subtitle: 'Add memories',
     testId: 'tile-upload'
   },
   { 
     to: '/closet', 
-    icon: Shirt, 
+    iconType: 'closet',
     label: 'Closet', 
     subtitle: 'Plan your fit',
     testId: 'tile-closet'
   },
   { 
     to: '/find-items', 
-    icon: Search, 
+    iconType: 'search',
     label: 'Find Items', 
     subtitle: 'Locate anything',
     testId: 'tile-find-items'
   },
   { 
     to: '/recipes', 
-    icon: CookingPot, 
+    iconType: 'recipes',
     label: 'Recipes', 
     subtitle: 'Family kitchen',
     testId: 'tile-recipes'
   },
   { 
     to: '/activities', 
-    icon: Activity, 
+    iconType: 'activities',
     label: 'Activities', 
     subtitle: 'Sports and events',
     testId: 'tile-activities'
   },
   { 
     to: '/finance', 
-    icon: Wallet, 
+    iconType: 'finance',
     label: 'Finance', 
     subtitle: 'Family legacy',
     testId: 'tile-finance'
@@ -135,7 +124,7 @@ const Dashboard = () => {
             <LuxuryTile
               key={tile.to}
               to={tile.to}
-              icon={tile.icon}
+              iconType={tile.iconType}
               label={tile.label}
               subtitle={tile.subtitle}
               testId={tile.testId}
