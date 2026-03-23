@@ -1,33 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Warm Dark Palette */
-  --bg-deep: #0D0D0F;
-  --bg-card: #16161A;
-  --bg-elevated: #1A1A1E;
+  /* Light Mode */
+  --bg-light: #FDFCFA;
+  --bg-card-light: #FFFFFF;
+  --text-light: #2D2D2D;
+  --text-muted-light: #6B6B6B;
+  --border-light: #E8E4DC;
   
-  /* Warm Neutrals */
-  --cream: #F0EDE6;
-  --cream-muted: #D8D4CC;
-  --warm-gray: #908C84;
-  --warm-gray-dark: #58585C;
+  /* Dark Mode */
+  --bg-dark: #0D0D0F;
+  --bg-card-dark: #16161A;
+  --text-dark: #F0EDE6;
+  --text-muted-dark: #908C84;
+  --border-dark: #232328;
   
-  /* Gold Accents */
+  /* Shared */
   --gold: #C9B896;
   --gold-muted: #8B7D5E;
-  
-  /* Borders */
-  --border: #232328;
-  --border-hover: #3D3830;
 }
 
 @layer base {
   * {
-    @apply border-[#232328];
+    @apply border-[#E8E4DC] dark:border-[#232328];
   }
   
   html {
@@ -37,10 +36,9 @@
   
   body {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    background-color: var(--bg-deep);
-    color: var(--cream);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    @apply bg-[#FDFCFA] dark:bg-[#0D0D0F] text-[#2D2D2D] dark:text-[#F0EDE6] transition-colors duration-300;
   }
 }
 
@@ -61,7 +59,7 @@
   }
 }
 
-/* Elegant scrollbar */
+/* Scrollbar - Light */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -72,11 +70,20 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2A2A2E;
+  background: #D0D0D0;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
+  background: #B0B0B0;
+}
+
+/* Scrollbar - Dark */
+.dark ::-webkit-scrollbar-thumb {
+  background: #2A2A2E;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
   background: #3A3A3E;
 }
 
@@ -97,5 +104,4 @@
 /* Selection */
 ::selection {
   background-color: rgba(201, 184, 150, 0.2);
-  color: var(--cream);
 }

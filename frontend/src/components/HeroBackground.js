@@ -21,9 +21,9 @@ export const HeroBackground = () => {
         setCurrentIndex(nextIndex);
         setNextIndex((nextIndex + 1) % heroImages.length);
         setIsTransitioning(false);
-      }, 2500); // Crossfade duration
+      }, 2500);
       
-    }, 10000); // Change every 10 seconds
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [nextIndex]);
@@ -33,9 +33,7 @@ export const HeroBackground = () => {
       {/* Current Image */}
       <div
         className="absolute inset-0 transition-opacity duration-[2500ms] ease-in-out"
-        style={{
-          opacity: isTransitioning ? 0 : 1,
-        }}
+        style={{ opacity: isTransitioning ? 0 : 1 }}
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -47,12 +45,10 @@ export const HeroBackground = () => {
         />
       </div>
 
-      {/* Next Image (fading in) */}
+      {/* Next Image */}
       <div
         className="absolute inset-0 transition-opacity duration-[2500ms] ease-in-out"
-        style={{
-          opacity: isTransitioning ? 1 : 0,
-        }}
+        style={{ opacity: isTransitioning ? 1 : 0 }}
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -64,27 +60,27 @@ export const HeroBackground = () => {
         />
       </div>
 
-      {/* Top gradient fade - darker at top for header readability */}
+      {/* Light mode overlay - warm cream tint */}
       <div 
-        className="absolute inset-0"
+        className="absolute inset-0 dark:hidden"
         style={{
-          background: 'linear-gradient(180deg, rgba(11, 12, 15, 0.85) 0%, rgba(11, 12, 15, 0.5) 25%, rgba(11, 12, 15, 0.35) 50%, rgba(11, 12, 15, 0.5) 75%, rgba(11, 12, 15, 0.9) 100%)',
+          background: 'linear-gradient(180deg, rgba(253, 252, 250, 0.75) 0%, rgba(253, 252, 250, 0.55) 30%, rgba(253, 252, 250, 0.45) 50%, rgba(253, 252, 250, 0.55) 70%, rgba(253, 252, 250, 0.85) 100%)',
         }}
       />
 
-      {/* Subtle warm tint overlay */}
+      {/* Dark mode overlay */}
       <div 
-        className="absolute inset-0"
+        className="absolute inset-0 hidden dark:block"
         style={{
-          background: 'linear-gradient(180deg, transparent 0%, rgba(198, 168, 90, 0.03) 50%, transparent 100%)',
+          background: 'linear-gradient(180deg, rgba(13, 13, 15, 0.85) 0%, rgba(13, 13, 15, 0.5) 25%, rgba(13, 13, 15, 0.35) 50%, rgba(13, 13, 15, 0.5) 75%, rgba(13, 13, 15, 0.9) 100%)',
         }}
       />
 
-      {/* Edge vignette for focus */}
+      {/* Vignette */}
       <div 
         className="absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse at center, transparent 30%, rgba(11, 12, 15, 0.4) 100%)',
+          background: 'radial-gradient(ellipse at center, transparent 30%, rgba(0, 0, 0, 0.15) 100%)',
         }}
       />
     </div>

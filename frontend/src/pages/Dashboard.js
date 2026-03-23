@@ -17,7 +17,7 @@ const tiles = [
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen bg-[#0D0D0F]">
+    <div className="min-h-screen bg-[#FDFCFA] dark:bg-[#0D0D0F] transition-colors duration-300">
       <Header />
       
       {/* Hero Section - Logo is the centerpiece */}
@@ -34,7 +34,7 @@ const Dashboard = () => {
         {/* Section header */}
         <div className="text-center mb-8">
           <p 
-            className="text-[#58585C] text-xs tracking-[0.3em] uppercase"
+            className="text-[#9A9A9A] dark:text-[#58585C] text-xs tracking-[0.3em] uppercase transition-colors duration-300"
             style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
           >
             Family Dashboard
@@ -60,26 +60,26 @@ const Dashboard = () => {
         {/* Footer */}
         <footer className="mt-24 md:mt-32 text-center pb-10">
           <div className="flex flex-col items-center gap-5">
-            {/* Mini logo */}
+            {/* Mini logo text */}
             <span 
-              className="text-2xl text-[#78756E]"
-              style={{ fontFamily: "'Pacifico', cursive" }}
+              className="text-lg font-semibold tracking-[0.15em] text-[#9A9A9A] dark:text-[#78756E] transition-colors duration-300"
+              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
             >
-              Stevens
+              STEVENS
             </span>
             
             {/* Tagline */}
-            <p className="text-[#4A4844] text-xs tracking-wider">
+            <p className="text-[#B0B0B0] dark:text-[#4A4844] text-xs tracking-wider transition-colors duration-300">
               God First. Family Always.
             </p>
             
             {/* Domain */}
-            <p className="text-[#3A3836] text-xs">
+            <p className="text-[#C0C0C0] dark:text-[#3A3836] text-xs transition-colors duration-300">
               Our family home: <span className="text-[#8B7D5E]">god-1st.com</span>
             </p>
             
             {/* Copyright */}
-            <p className="text-[#2A2826] text-[11px] mt-4">
+            <p className="text-[#D0D0D0] dark:text-[#2A2826] text-[11px] mt-4 transition-colors duration-300">
               © Stevens Family
             </p>
           </div>
