@@ -1,53 +1,57 @@
 import { useEffect } from "react";
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+// Pages
+import Dashboard from "./pages/Dashboard";
+import CalendarPage from "./pages/CalendarPage";
+import PhotosPage from "./pages/PhotosPage";
+import UploadPage from "./pages/UploadPage";
+import DinnerPage from "./pages/DinnerPage";
+import ClosetPage from "./pages/ClosetPage";
+import FindItemsPage from "./pages/FindItemsPage";
+import RecipesPage from "./pages/RecipesPage";
+import ActivitiesPage from "./pages/ActivitiesPage";
+import FinancePage from "./pages/FinancePage";
+import MorePage from "./pages/MorePage";
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
+function App() {
   useEffect(() => {
-    helloWorldApi();
+    // Register service worker for PWA
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then((registration) => {
+            console.log('SW registered:', registration);
+          })
+          .catch((error) => {
+            console.log('SW registration failed:', error);
+          });
+      });
+    }
   }, []);
 
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
-
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <ThemeProvider>
+      <div className="App font-body">
+        <HashRouter>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/calendar" element={<CalendarPage />} />
+            <Route path="/photos" element={<PhotosPage />} />
+            <Route path="/upload" element={<UploadPage />} />
+            <Route path="/dinner" element={<DinnerPage />} />
+            <Route path="/closet" element={<ClosetPage />} />
+            <Route path="/find-items" element={<FindItemsPage />} />
+            <Route path="/recipes" element={<RecipesPage />} />
+            <Route path="/activities" element={<ActivitiesPage />} />
+            <Route path="/finance" element={<FinancePage />} />
+            <Route path="/more" element={<MorePage />} />
+          </Routes>
+        </HashRouter>
+      </div>
+    </ThemeProvider>
   );
 }
 
