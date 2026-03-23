@@ -1,0 +1,153 @@
+{
+  "design_system": {
+    "identity": {
+      "name": "Stevens Family",
+      "tagline": "God First. Family Always.",
+      "tone": "Warm, Welcoming, Organized, Playful but Modern",
+      "persona": "E1",
+      "app_type": "PWA Dashboard",
+      "target_audience": "Blended family with children"
+    },
+    "typography": {
+      "headings": {
+        "font_family": "Nunito, sans-serif",
+        "weights": ["600", "700", "800"],
+        "usage": "All titles, section headers, and tile labels. Use 'tracking-tight' for larger sizes.",
+        "install_url": "https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap"
+      },
+      "body": {
+        "font_family": "DM Sans, sans-serif",
+        "weights": ["400", "500", "700"],
+        "usage": "Paragraphs, list items, and utility text.",
+        "install_url": "https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&display=swap"
+      }
+    },
+    "colors": {
+      "palette": {
+        "primary": {
+          "default": "#E07A5F",
+          "foreground": "#FFFFFF",
+          "description": "Warm Terracotta - used for key actions and active states."
+        },
+        "secondary": {
+          "default": "#81B29A",
+          "foreground": "#FFFFFF",
+          "description": "Sage Green - used for success states, calmness, and nature vibes."
+        },
+        "background": {
+          "light": "#F4F1DE",
+          "dark": "#1D1D1F",
+          "description": "Soft Sand for light mode (warmth), Deep Charcoal for dark mode (depth)."
+        },
+        "surface": {
+          "light": "#FFFFFF",
+          "dark": "#2C2C2E",
+          "description": "Card backgrounds. Must be distinct from the app background."
+        },
+        "text": {
+          "primary": "#3D405B",
+          "secondary": "#6B7280",
+          "dark_primary": "#F4F1DE",
+          "dark_secondary": "#A1A1AA"
+        },
+        "accent": {
+          "default": "#F2CC8F",
+          "description": "Soft Gold - used for highlights or special notifications."
+        }
+      },
+      "rules": [
+        "Use the Soft Sand (#F4F1DE) as the main background in light mode to create warmth. Do not use pure white #FFFFFF for the body background.",
+        "In Dark Mode, use Deep Charcoal (#1D1D1F), never pure black.",
+        "Text in light mode should be Deep Navy/Grey (#3D405B), not black, to maintain softness."
+      ]
+    },
+    "layout": {
+      "spacing": "Relaxed. Use p-6 or p-8 for main containers. Mobile-first approach.",
+      "grid_system": {
+        "dashboard": "Bento Grid",
+        "columns": "grid-cols-2 md:grid-cols-4 lg:grid-cols-6",
+        "gap": "gap-4 md:gap-6",
+        "tile_styles": "rounded-3xl shadow-sm hover:shadow-md transition-all duration-300"
+      },
+      "navigation": {
+        "type": "Bottom Tab Bar",
+        "style": "Fixed bottom, glassmorphism or solid warm background. Icons + Labels.",
+        "mobile_height": "h-20",
+        "desktop_style": "Hidden or converted to side rail (but prioritize mobile view)."
+      }
+    },
+    "components": {
+      "cards": {
+        "radius": "rounded-3xl",
+        "shadow": "shadow-sm",
+        "border": "border-none or subtle border-black/5"
+      },
+      "buttons": {
+        "radius": "rounded-full",
+        "padding": "px-6 py-3",
+        "font_weight": "font-bold"
+      },
+      "icons": {
+        "library": "lucide-react",
+        "style": "Rounded stroke, 2px width. Use varied colors for different categories."
+      }
+    },
+    "motion": {
+      "transitions": "all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)",
+      "hover_effects": "Scale up slightly (scale-105) for tiles.",
+      "page_transition": "Fade in + Slide up subtle."
+    }
+  },
+  "pages": {
+    "dashboard": {
+      "structure": [
+        "Header: Greeting + 'Stevens Family' + Dark Mode Toggle",
+        "Grid: Bento Layout",
+        "Tile 1 (Large): Dinner Tonight (Image Background + Text Overlay)",
+        "Tile 2 (Medium): Calendar/Events (List view preview)",
+        "Tile 3 (Medium): Photos (Gallery link)",
+        "Tile 4 (Small): Closet (Icon + Link)",
+        "Tile 5 (Small): Finance (Icon + Link)",
+        "Tile 6 (Small): Recipes (Icon + Link)",
+        "Tile 7 (Small): Activities (Icon + Link)",
+        "Tile 8 (Small): Upload (Action Icon)",
+        "Footer: Navigation Bar"
+      ]
+    },
+    "calendar": {
+      "content": "Google Calendar Embed (Responsive Iframe)"
+    },
+    "photos": {
+      "content": "Link to Google Drive / Gallery Grid View"
+    },
+    "dinner": {
+      "content": "Embed Google Doc/Sheet for weekly meal plan"
+    },
+    "closet": {
+      "content": "Acloset integration/link + Outfit Planner"
+    }
+  },
+  "assets": {
+    "images": {
+      "dinner_bg": "https://images.unsplash.com/photo-1764756995069-4a0b5f31d792",
+      "closet_bg": "https://images.unsplash.com/photo-1765766600589-ddad380d6534",
+      "activities_bg": "https://images.unsplash.com/photo-1756092790141-24fa7a3ce044",
+      "recipes_bg": "https://images.unsplash.com/photo-1758522484068-4ba2b78add9e",
+      "finance_bg": "https://images.unsplash.com/photo-1773702787707-d7a790aa9f5e"
+    }
+  },
+  "technical_instructions": {
+    "routing": "Use HashRouter from react-router-dom for GitHub Pages compatibility.",
+    "pwa": "Ensure manifest.json includes 'Stevens Family' name, correct theme_color (#E07A5F), and background_color (#F4F1DE). Add a service worker registration.",
+    "deployment": "Build output must be in 'build' or 'dist' folder. All paths relative.",
+    "meta_tags": "Add <meta name='apple-mobile-web-app-capable' content='yes'> and <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'>."
+  },
+  "universal_guidelines": [
+    "Do not use gradients for backgrounds, use solid warm colors.",
+    "Ensure touch targets are at least 44px for kids/fingers.",
+    "Dark mode should feel cozy (dimmed lights), not high-contrast neon.",
+    "Use 'lucide-react' for all icons.",
+    "Implement a 'Pull to Refresh' feel or smooth scrolling (lenis not strictly required but nice).",
+    "Use data-testid for all interactive elements."
+  ]
+}
