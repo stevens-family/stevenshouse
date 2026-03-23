@@ -1,5 +1,80 @@
 // Stevens Family Legacy Logo - Heritage Family Brand
-// Timeless, strong, generational family identity
+// Custom Ornamental S Monogram
+
+// Custom SVG Ornamental S - Family Crest Style
+const OrnamentalS = ({ className = '', size = 56 }) => (
+  <svg 
+    viewBox="0 0 60 80" 
+    width={size} 
+    height={size * 1.33}
+    className={className}
+    fill="none"
+  >
+    {/* Main S body with ornamental serifs */}
+    <path
+      d="
+        M42 18
+        C42 12, 36 6, 26 6
+        C16 6, 10 12, 10 20
+        C10 28, 16 32, 26 36
+        C36 40, 44 44, 44 54
+        C44 64, 36 72, 26 72
+        C16 72, 10 66, 10 60
+      "
+      stroke="currentColor"
+      strokeWidth="5"
+      strokeLinecap="round"
+      fill="none"
+    />
+    
+    {/* Top flourish - decorative serif */}
+    <path
+      d="M42 18 C46 16, 50 14, 52 10"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      fill="none"
+    />
+    <circle cx="52" cy="8" r="2" fill="currentColor" />
+    
+    {/* Top left decorative element */}
+    <path
+      d="M18 8 C14 6, 10 6, 6 8"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      fill="none"
+    />
+    
+    {/* Bottom flourish - decorative serif */}
+    <path
+      d="M10 60 C6 62, 4 66, 4 70"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      fill="none"
+    />
+    <circle cx="4" cy="72" r="2" fill="currentColor" />
+    
+    {/* Bottom right decorative element */}
+    <path
+      d="M34 70 C38 72, 44 74, 50 72"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      fill="none"
+    />
+    
+    {/* Center crossbar accent */}
+    <path
+      d="M22 39 L38 39"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      opacity="0.4"
+    />
+  </svg>
+);
 
 export const FamilyLogo = ({ size = 'hero', className = '' }) => {
   const sizes = {
@@ -18,10 +93,15 @@ export const FamilyLogo = ({ size = 'hero', className = '' }) => {
       <div className={`relative ${className}`} style={{ width: 100, height: 100 }} data-testid="family-logo">
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="100" height="100" rx="20" fill="#0D0D0F" />
+          {/* Shield */}
           <path d="M50 12L18 28v28c0 18 12 30 32 38 20-8 32-20 32-38V28L50 12z" 
             fill="#1A1A1E" stroke="#C9B896" strokeWidth="2.5" />
-          <text x="50" y="62" fontFamily="Georgia, serif" fontSize="38" fontWeight="700"
-            fill="#C9B896" textAnchor="middle" style={{fontStyle: 'italic'}}>S</text>
+          {/* Simplified ornamental S for icon */}
+          <g transform="translate(32, 28) scale(0.6)" fill="none" stroke="#C9B896" strokeWidth="4">
+            <path d="M42 18 C42 12, 36 6, 26 6 C16 6, 10 12, 10 20 C10 28, 16 32, 26 36 C36 40, 44 44, 44 54 C44 64, 36 72, 26 72 C16 72, 10 66, 10 60" strokeLinecap="round" />
+            <path d="M42 18 C46 16, 48 14, 50 12" strokeWidth="2" strokeLinecap="round" />
+            <path d="M10 60 C6 62, 4 66, 4 68" strokeWidth="2" strokeLinecap="round" />
+          </g>
         </svg>
       </div>
     );
@@ -31,12 +111,18 @@ export const FamilyLogo = ({ size = 'hero', className = '' }) => {
   if (size === 'sm' || size === 'md') {
     return (
       <div className={`flex items-center gap-3 ${className}`} data-testid="family-logo">
-        {/* Mini shield */}
-        <svg width="32" height="36" viewBox="0 0 32 36" fill="none">
-          <path d="M16 2L2 9v12c0 9 6 15 14 18 8-3 14-9 14-18V9L16 2z" 
-            className="fill-[#F5F2EB] dark:fill-[#1A1A1E] stroke-[#C9B896]" strokeWidth="1.5" />
-          <text x="16" y="23" fontFamily="Georgia, serif" fontSize="14" fontWeight="700"
-            className="fill-[#8B7D5E] dark:fill-[#C9B896]" textAnchor="middle" style={{fontStyle: 'italic'}}>S</text>
+        {/* Mini shield with ornamental S */}
+        <svg width="36" height="42" viewBox="0 0 36 42" fill="none">
+          <path d="M18 2L2 10v14c0 10 6 17 16 20 10-3 16-10 16-20V10L18 2z" 
+            className="fill-[#F0EDE6] dark:fill-[#1A1A1E] stroke-[#C9B896]" strokeWidth="1.5" />
+          {/* Mini ornamental S */}
+          <g transform="translate(10, 10) scale(0.28)" className="stroke-[#8B7D5E] dark:stroke-[#C9B896]" fill="none" strokeWidth="5">
+            <path d="M42 18 C42 12, 36 6, 26 6 C16 6, 10 12, 10 20 C10 28, 16 32, 26 36 C36 40, 44 44, 44 54 C44 64, 36 72, 26 72 C16 72, 10 66, 10 60" strokeLinecap="round" />
+            <path d="M42 18 C46 16, 50 14, 52 10" strokeWidth="2.5" strokeLinecap="round" />
+            <circle cx="52" cy="8" r="2" className="fill-[#8B7D5E] dark:fill-[#C9B896]" />
+            <path d="M10 60 C6 62, 4 66, 4 70" strokeWidth="2.5" strokeLinecap="round" />
+            <circle cx="4" cy="72" r="2" className="fill-[#8B7D5E] dark:fill-[#C9B896]" />
+          </g>
         </svg>
         <div className="flex flex-col">
           <span 
@@ -63,46 +149,38 @@ export const FamilyLogo = ({ size = 'hero', className = '' }) => {
       style={{ transform: `scale(${scale})`, transformOrigin: 'center' }}
       data-testid="family-logo"
     >
-      {/* Heritage Shield Crest with Decorative S */}
+      {/* Heritage Shield Crest with Custom Ornamental S */}
       <div className="mb-6">
-        <svg width="100" height="120" viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="110" height="130" viewBox="0 0 110 130" fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* Shield background */}
           <path 
-            d="M50 6L8 26v40c0 28 18 46 42 54 24-8 42-26 42-54V26L50 6z" 
+            d="M55 6L8 28v44c0 30 20 50 47 58 27-8 47-28 47-58V28L55 6z" 
             className="fill-[#F0EDE6] dark:fill-[#1A1A1E]"
           />
           {/* Shield border - gold */}
           <path 
-            d="M50 6L8 26v40c0 28 18 46 42 54 24-8 42-26 42-54V26L50 6z" 
+            d="M55 6L8 28v44c0 30 20 50 47 58 27-8 47-28 47-58V28L55 6z" 
             fill="none"
             className="stroke-[#B8A070] dark:stroke-[#C9B896]" 
             strokeWidth="3"
           />
           {/* Inner decorative border */}
           <path 
-            d="M50 16L18 32v32c0 22 14 36 32 42 18-6 32-20 32-42V32L50 16z" 
+            d="M55 16L18 34v36c0 24 16 40 37 46 21-6 37-22 37-46V34L55 16z" 
             fill="none"
             className="stroke-[#C9B896] dark:stroke-[#C9B896]" 
             strokeWidth="1"
-            opacity="0.5"
+            opacity="0.4"
           />
           
-          {/* Decorative S - Elegant Italic Serif with flourish */}
-          <text 
-            x="50" y="78" 
-            fontFamily="Georgia, 'Times New Roman', serif" 
-            fontSize="56" 
-            fontWeight="700"
-            className="fill-[#8B7D5E] dark:fill-[#C9B896]" 
-            textAnchor="middle"
-            style={{ fontStyle: 'italic' }}
-          >
-            S
-          </text>
+          {/* Custom Ornamental S Monogram */}
+          <g transform="translate(30, 32)" className="text-[#8B7D5E] dark:text-[#C9B896]">
+            <OrnamentalS size={50} className="text-[#8B7D5E] dark:text-[#C9B896]" />
+          </g>
           
-          {/* Decorative flourish under S */}
+          {/* Bottom decorative accent */}
           <path 
-            d="M32 88 Q50 95, 68 88" 
+            d="M35 105 Q55 115, 75 105" 
             fill="none"
             className="stroke-[#B8A070] dark:stroke-[#C9B896]" 
             strokeWidth="2"
@@ -110,17 +188,15 @@ export const FamilyLogo = ({ size = 'hero', className = '' }) => {
           />
           
           {/* Small accent dots */}
-          <circle cx="28" cy="88" r="2" className="fill-[#B8A070] dark:fill-[#C9B896]" opacity="0.7" />
-          <circle cx="72" cy="88" r="2" className="fill-[#B8A070] dark:fill-[#C9B896]" opacity="0.7" />
+          <circle cx="30" cy="105" r="2.5" className="fill-[#B8A070] dark:fill-[#C9B896]" opacity="0.8" />
+          <circle cx="80" cy="105" r="2.5" className="fill-[#B8A070] dark:fill-[#C9B896]" opacity="0.8" />
         </svg>
       </div>
 
       {/* STEVENS - Strong Heritage Serif */}
       <h1 
         className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-[0.15em] text-[#1A1A1A] dark:text-[#F0EDE6]"
-        style={{ 
-          fontFamily: "'Playfair Display', Georgia, serif",
-        }}
+        style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
       >
         STEVENS
       </h1>

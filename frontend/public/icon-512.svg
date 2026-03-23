@@ -2,17 +2,32 @@
   <!-- Background -->
   <rect width="512" height="512" rx="100" fill="#0D0D0F"/>
   
-  <!-- Shield outline -->
-  <path d="M256 60L80 132v112c0 88 64 140 176 184 112-44 176-96 176-184V132L256 60z" 
-    fill="none" stroke="#C9B896" stroke-width="6"/>
+  <!-- Shield -->
+  <path d="M256 48L72 132v152c0 108 72 172 184 204 112-32 184-96 184-204V132L256 48z" 
+    fill="#1A1A1E" stroke="#C9B896" stroke-width="6"/>
   
-  <!-- Inner shield -->
-  <path d="M256 92L112 152v92c0 72 52 116 144 152 92-36 144-80 144-152V152L256 92z" 
-    fill="#151518" stroke="#C9B896" stroke-width="2" opacity="0.4"/>
+  <!-- Inner shield line -->
+  <path d="M256 80L104 148v124c0 88 56 140 152 168 96-28 152-80 152-168V148L256 80z" 
+    fill="none" stroke="#C9B896" stroke-width="2" opacity="0.3"/>
   
-  <!-- S letter -->
-  <text x="256" y="305" font-family="Georgia, serif" font-size="170" font-weight="700" fill="#E8DCC4" text-anchor="middle">S</text>
+  <!-- Custom Ornamental S -->
+  <g transform="translate(160, 130)" fill="none" stroke="#C9B896" stroke-linecap="round">
+    <!-- Main S curve -->
+    <path d="M130 50 C130 30, 106 10, 76 10 C46 10, 22 30, 22 55 C22 80, 46 95, 76 105 C106 115, 134 130, 134 162 C134 194, 106 218, 76 218 C46 218, 22 195, 22 175" stroke-width="16"/>
+    <!-- Top flourish -->
+    <path d="M130 50 C145 44, 156 34, 162 18" stroke-width="8"/>
+    <circle cx="164" cy="12" r="6" fill="#C9B896"/>
+    <!-- Bottom flourish -->
+    <path d="M22 175 C8 180, 2 195, 2 215" stroke-width="8"/>
+    <circle cx="0" cy="220" r="6" fill="#C9B896"/>
+    <!-- Top left accent -->
+    <path d="M52 14 C38 8, 20 8, 6 14" stroke-width="5"/>
+    <!-- Bottom right accent -->
+    <path d="M100 214 C118 222, 142 228, 160 222" stroke-width="5"/>
+  </g>
   
-  <!-- Decorative line -->
-  <line x1="180" y1="345" x2="332" y2="345" stroke="#C9B896" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+  <!-- Bottom decorative curve -->
+  <path d="M176 420 Q256 448, 336 420" fill="none" stroke="#C9B896" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="164" cy="420" r="8" fill="#C9B896" opacity="0.8"/>
+  <circle cx="348" cy="420" r="8" fill="#C9B896" opacity="0.8"/>
 </svg>
