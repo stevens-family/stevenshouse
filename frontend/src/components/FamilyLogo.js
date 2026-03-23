@@ -1,78 +1,49 @@
 // Stevens Family Legacy Logo - Heritage Family Brand
-// Custom Ornamental S Monogram
+// Bold Engraved Serif S Monogram
 
-// Custom SVG Ornamental S - Family Crest Style
-const OrnamentalS = ({ className = '', size = 56 }) => (
+// Bold Engraved S - Classic Monogram Style
+const EngravedS = ({ className = '', size = 56 }) => (
   <svg 
-    viewBox="0 0 60 80" 
-    width={size} 
-    height={size * 1.33}
+    viewBox="0 0 50 70" 
+    width={size * 0.71} 
+    height={size}
     className={className}
-    fill="none"
+    fill="currentColor"
   >
-    {/* Main S body with ornamental serifs */}
-    <path
-      d="
-        M42 18
-        C42 12, 36 6, 26 6
-        C16 6, 10 12, 10 20
-        C10 28, 16 32, 26 36
-        C36 40, 44 44, 44 54
-        C44 64, 36 72, 26 72
-        C16 72, 10 66, 10 60
-      "
-      stroke="currentColor"
-      strokeWidth="5"
-      strokeLinecap="round"
-      fill="none"
-    />
-    
-    {/* Top flourish - decorative serif */}
-    <path
-      d="M42 18 C46 16, 50 14, 52 10"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      fill="none"
-    />
-    <circle cx="52" cy="8" r="2" fill="currentColor" />
-    
-    {/* Top left decorative element */}
-    <path
-      d="M18 8 C14 6, 10 6, 6 8"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      fill="none"
-    />
-    
-    {/* Bottom flourish - decorative serif */}
-    <path
-      d="M10 60 C6 62, 4 66, 4 70"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      fill="none"
-    />
-    <circle cx="4" cy="72" r="2" fill="currentColor" />
-    
-    {/* Bottom right decorative element */}
-    <path
-      d="M34 70 C38 72, 44 74, 50 72"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      fill="none"
-    />
-    
-    {/* Center crossbar accent */}
-    <path
-      d="M22 39 L38 39"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      opacity="0.4"
-    />
+    {/* Bold Engraved Serif S - Strong, Carved, Timeless */}
+    <path d="
+      M38 16
+      C38 8, 31 2, 22 2
+      C13 2, 6 8, 6 16
+      C6 24, 12 28, 22 32
+      L28 34
+      C36 37, 42 42, 42 52
+      C42 62, 34 68, 24 68
+      C14 68, 6 62, 6 54
+      L6 52
+      L14 52
+      L14 54
+      C14 58, 18 62, 24 62
+      C30 62, 34 58, 34 52
+      C34 46, 30 43, 22 40
+      L16 38
+      C8 35, 6 28, 6 22
+      L6 16
+      C6 8, 14 2, 24 2
+      C14 2, 6 8, 6 16
+      L14 16
+      C14 12, 18 8, 24 8
+      C30 8, 34 12, 34 16
+      C34 20, 32 22, 28 24
+      L38 16
+      Z
+      
+      M14 16
+      C14 11, 18 8, 24 8
+      C30 8, 34 12, 34 18
+      C34 24, 28 28, 20 30
+      L14 16
+    "/>
   </svg>
 );
 
@@ -96,12 +67,9 @@ export const FamilyLogo = ({ size = 'hero', className = '' }) => {
           {/* Shield */}
           <path d="M50 12L18 28v28c0 18 12 30 32 38 20-8 32-20 32-38V28L50 12z" 
             fill="#1A1A1E" stroke="#C9B896" strokeWidth="2.5" />
-          {/* Simplified ornamental S for icon */}
-          <g transform="translate(32, 28) scale(0.6)" fill="none" stroke="#C9B896" strokeWidth="4">
-            <path d="M42 18 C42 12, 36 6, 26 6 C16 6, 10 12, 10 20 C10 28, 16 32, 26 36 C36 40, 44 44, 44 54 C44 64, 36 72, 26 72 C16 72, 10 66, 10 60" strokeLinecap="round" />
-            <path d="M42 18 C46 16, 48 14, 50 12" strokeWidth="2" strokeLinecap="round" />
-            <path d="M10 60 C6 62, 4 66, 4 68" strokeWidth="2" strokeLinecap="round" />
-          </g>
+          {/* Bold Engraved S */}
+          <text x="50" y="64" fontFamily="Georgia, 'Times New Roman', serif" fontSize="42" fontWeight="900"
+            fill="#C9B896" textAnchor="middle">S</text>
         </svg>
       </div>
     );
@@ -111,18 +79,13 @@ export const FamilyLogo = ({ size = 'hero', className = '' }) => {
   if (size === 'sm' || size === 'md') {
     return (
       <div className={`flex items-center gap-3 ${className}`} data-testid="family-logo">
-        {/* Mini shield with ornamental S */}
+        {/* Mini shield with bold S */}
         <svg width="36" height="42" viewBox="0 0 36 42" fill="none">
           <path d="M18 2L2 10v14c0 10 6 17 16 20 10-3 16-10 16-20V10L18 2z" 
             className="fill-[#F0EDE6] dark:fill-[#1A1A1E] stroke-[#C9B896]" strokeWidth="1.5" />
-          {/* Mini ornamental S */}
-          <g transform="translate(10, 10) scale(0.28)" className="stroke-[#8B7D5E] dark:stroke-[#C9B896]" fill="none" strokeWidth="5">
-            <path d="M42 18 C42 12, 36 6, 26 6 C16 6, 10 12, 10 20 C10 28, 16 32, 26 36 C36 40, 44 44, 44 54 C44 64, 36 72, 26 72 C16 72, 10 66, 10 60" strokeLinecap="round" />
-            <path d="M42 18 C46 16, 50 14, 52 10" strokeWidth="2.5" strokeLinecap="round" />
-            <circle cx="52" cy="8" r="2" className="fill-[#8B7D5E] dark:fill-[#C9B896]" />
-            <path d="M10 60 C6 62, 4 66, 4 70" strokeWidth="2.5" strokeLinecap="round" />
-            <circle cx="4" cy="72" r="2" className="fill-[#8B7D5E] dark:fill-[#C9B896]" />
-          </g>
+          {/* Bold S */}
+          <text x="18" y="28" fontFamily="Georgia, 'Times New Roman', serif" fontSize="20" fontWeight="900"
+            className="fill-[#8B7D5E] dark:fill-[#C9B896]" textAnchor="middle">S</text>
         </svg>
         <div className="flex flex-col">
           <span 
@@ -149,7 +112,7 @@ export const FamilyLogo = ({ size = 'hero', className = '' }) => {
       style={{ transform: `scale(${scale})`, transformOrigin: 'center' }}
       data-testid="family-logo"
     >
-      {/* Heritage Shield Crest with Custom Ornamental S */}
+      {/* Heritage Shield Crest with Bold Engraved S */}
       <div className="mb-6">
         <svg width="110" height="130" viewBox="0 0 110 130" fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* Shield background */}
@@ -173,23 +136,26 @@ export const FamilyLogo = ({ size = 'hero', className = '' }) => {
             opacity="0.4"
           />
           
-          {/* Custom Ornamental S Monogram */}
-          <g transform="translate(30, 32)" className="text-[#8B7D5E] dark:text-[#C9B896]">
-            <OrnamentalS size={50} className="text-[#8B7D5E] dark:text-[#C9B896]" />
-          </g>
+          {/* Bold Engraved Serif S - Strong, Carved, Classic */}
+          <text 
+            x="55" y="85" 
+            fontFamily="Georgia, 'Times New Roman', serif" 
+            fontSize="62" 
+            fontWeight="900"
+            className="fill-[#8B7D5E] dark:fill-[#C9B896]" 
+            textAnchor="middle"
+            style={{ letterSpacing: '-0.02em' }}
+          >
+            S
+          </text>
           
-          {/* Bottom decorative accent */}
-          <path 
-            d="M35 105 Q55 115, 75 105" 
-            fill="none"
+          {/* Simple underline accent */}
+          <line 
+            x1="35" y1="98" x2="75" y2="98" 
             className="stroke-[#B8A070] dark:stroke-[#C9B896]" 
-            strokeWidth="2"
+            strokeWidth="2.5"
             strokeLinecap="round"
           />
-          
-          {/* Small accent dots */}
-          <circle cx="30" cy="105" r="2.5" className="fill-[#B8A070] dark:fill-[#C9B896]" opacity="0.8" />
-          <circle cx="80" cy="105" r="2.5" className="fill-[#B8A070] dark:fill-[#C9B896]" opacity="0.8" />
         </svg>
       </div>
 
