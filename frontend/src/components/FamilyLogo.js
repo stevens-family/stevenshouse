@@ -1,5 +1,6 @@
-// Stevens Family Legacy Logo - Single "S" Monogram Crest
-// Classic luxury serif S — strong, balanced, elegant, not script/curly/thin
+// Stevens Family Legacy Logo - Calligraphic "S" Monogram Crest
+// Hand-crafted SVG path — bold cursive S with calligraphic thick-thin variation
+// Not a font glyph, not a text element — a designed logo mark
 
 export const FamilyLogo = ({ size = 'hero', className = '' }) => {
   const sizes = {
@@ -12,9 +13,6 @@ export const FamilyLogo = ({ size = 'hero', className = '' }) => {
 
   const { scale } = sizes[size];
 
-  // Shared font style for the S monogram
-  const sFont = "Georgia, 'Times New Roman', serif";
-
   // Icon variant for PWA app icon
   if (size === 'icon') {
     return (
@@ -22,7 +20,14 @@ export const FamilyLogo = ({ size = 'hero', className = '' }) => {
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="100" height="100" rx="20" fill="#0D0D0F" />
           <path d="M50 14L20 28v26c0 18 12 30 30 36 18-6 30-18 30-36V28L50 14z" fill="#1A1A1E" stroke="#C9B896" strokeWidth="2.5" />
-          <text x="50" y="64" textAnchor="middle" fill="#C9B896" fontFamily={sFont} fontWeight="bold" fontSize="32">S</text>
+          {/* Calligraphic S — base curve */}
+          <path d="M60 32 C58 24, 52 22, 46 24 C38 26, 34 34, 36 42 C38 48, 46 52, 52 56 C58 60, 64 68, 58 74 C52 80, 42 78, 38 72"
+            stroke="#C9B896" strokeWidth="5" strokeLinecap="round" fill="none" />
+          {/* Thick overlays on main curves */}
+          <path d="M46 24 C38 26, 34 34, 36 42"
+            stroke="#C9B896" strokeWidth="8" strokeLinecap="round" fill="none" />
+          <path d="M52 56 C58 60, 64 68, 58 74"
+            stroke="#C9B896" strokeWidth="8" strokeLinecap="round" fill="none" />
         </svg>
       </div>
     );
@@ -37,7 +42,14 @@ export const FamilyLogo = ({ size = 'hero', className = '' }) => {
             d="M17 2L2 9v14c0 10 6 16 15 19 9-3 15-9 15-19V9L17 2z" 
             className="fill-[#F0EDE6] dark:fill-[#1A1A1E] stroke-[#C9B896]" strokeWidth="1.5" 
           />
-          <text x="17" y="26" textAnchor="middle" className="fill-[#8B7D5E] dark:fill-[#C9B896]" fontFamily={sFont} fontWeight="bold" fontSize="14">S</text>
+          {/* Calligraphic S — mini */}
+          <path d="M21 11 C20 8, 18 7, 16 8 C13 9, 11 12, 12 15 C12 17, 15 18, 18 20 C20 21, 22 24, 20 27 C18 29, 14 28, 13 26"
+            className="stroke-[#8B7D5E] dark:stroke-[#C9B896]" strokeWidth="2" strokeLinecap="round" fill="none" />
+          {/* Thick overlays */}
+          <path d="M16 8 C13 9, 11 12, 12 15"
+            className="stroke-[#8B7D5E] dark:stroke-[#C9B896]" strokeWidth="3.2" strokeLinecap="round" fill="none" />
+          <path d="M18 20 C20 21, 22 24, 20 27"
+            className="stroke-[#8B7D5E] dark:stroke-[#C9B896]" strokeWidth="3.2" strokeLinecap="round" fill="none" />
         </svg>
         <div className="flex flex-col">
           <span 
@@ -57,14 +69,14 @@ export const FamilyLogo = ({ size = 'hero', className = '' }) => {
     );
   }
 
-  // Full hero logo — S monogram crest
+  // Full hero logo — calligraphic S monogram crest
   return (
     <div 
       className={`flex flex-col items-center ${className}`} 
       style={{ transform: `scale(${scale})`, transformOrigin: 'center' }}
       data-testid="family-logo"
     >
-      {/* Shield Crest with S Monogram */}
+      {/* Shield Crest with Calligraphic S */}
       <div className="mb-6">
         <svg width="120" height="145" viewBox="0 0 120 145" fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* Shield background */}
@@ -88,15 +100,25 @@ export const FamilyLogo = ({ size = 'hero', className = '' }) => {
             opacity="0.3"
           />
           
-          {/* S Monogram — classic luxury serif, centered, bold */}
-          <text 
-            x="60" y="84" 
-            textAnchor="middle" 
-            className="fill-[#8B7D5E] dark:fill-[#C9B896]" 
-            fontFamily="Georgia, 'Times New Roman', serif" 
-            fontWeight="bold" 
-            fontSize="52"
-          >S</text>
+          {/* Calligraphic S Monogram — hand-crafted path with thick-thin variation */}
+          {/* Base S curve — the full flowing shape */}
+          <path 
+            d="M79 36 C77 24, 67 20, 57 22 C45 24, 35 36, 37 48 C39 58, 53 62, 63 68 C75 76, 81 90, 71 100 C61 110, 47 106, 43 94"
+            className="stroke-[#8B7D5E] dark:stroke-[#C9B896]"
+            strokeWidth="8" strokeLinecap="round" fill="none"
+          />
+          {/* Thick overlay — upper-left bowl (calligraphic downstroke) */}
+          <path 
+            d="M57 22 C45 24, 35 36, 37 48"
+            className="stroke-[#8B7D5E] dark:stroke-[#C9B896]"
+            strokeWidth="13" strokeLinecap="round" fill="none"
+          />
+          {/* Thick overlay — lower-right bowl (calligraphic downstroke) */}
+          <path 
+            d="M63 68 C75 76, 81 90, 71 100"
+            className="stroke-[#8B7D5E] dark:stroke-[#C9B896]"
+            strokeWidth="13" strokeLinecap="round" fill="none"
+          />
           
           {/* Bottom accent line */}
           <line x1="40" y1="120" x2="80" y2="120" className="stroke-[#B8A070] dark:stroke-[#C9B896]" strokeWidth="2" strokeLinecap="round" />
