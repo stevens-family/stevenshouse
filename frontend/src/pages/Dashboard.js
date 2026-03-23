@@ -145,15 +145,32 @@ const Dashboard = () => {
 
         {/* Footer */}
         <footer className="mt-20 md:mt-28 text-center pb-8">
-          <div className="flex items-center justify-center gap-3">
-            <SFMonogram size="sm" variant="stacked" />
-            <div className="w-px h-5 bg-[rgba(255,255,255,0.08)]" />
-            <span 
-              className="text-[#4B5563] text-xs tracking-[0.2em] uppercase"
-              style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-            >
-              Family Legacy Platform
-            </span>
+          <div className="flex flex-col items-center gap-4">
+            {/* Family Name */}
+            <div className="flex items-center gap-2">
+              <SFMonogram size="sm" variant="stacked" />
+              <span 
+                className="text-[#9CA3AF] text-sm font-medium"
+                style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+              >
+                Stevens Family
+              </span>
+            </div>
+            
+            {/* Tagline */}
+            <p className="text-[#6B7280] text-xs">
+              God First. Family Always.
+            </p>
+            
+            {/* Domain info */}
+            <p className="text-[#4B5563] text-xs max-w-xs">
+              Part of our private family domain: <span className="text-[#C6A85A]">god-1st.com</span>
+            </p>
+            
+            {/* Copyright */}
+            <p className="text-[#3F3F46] text-[11px] mt-2">
+              © Stevens Family
+            </p>
           </div>
         </footer>
       </main>
