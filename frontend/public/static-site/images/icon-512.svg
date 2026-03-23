@@ -1,0 +1,5 @@
+<svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="100" fill="#0D0D0F"/>
+  <path d="M256 72L100 142v134c0 90 60 150 156 182 96-32 156-92 156-182V142L256 72z" fill="#1A1A1E" stroke="#C9B896" stroke-width="10"/>
+  <text x="256" y="300" text-anchor="middle" fill="#C9B896" font-family="Georgia, serif" font-weight="bold" font-size="120" letter-spacing="5">SF</text>
+</svg>
