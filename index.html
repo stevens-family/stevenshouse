@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stevens Family</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0D0D0F">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo" data-testid="header-logo">
+        <svg class="header-logo-crest" viewBox="0 0 34 40" fill="none">
+          <path d="M17 2L2 9v14c0 10 6 16 15 19 9-3 15-9 15-19V9L17 2z" fill="var(--tips-bg)" stroke="var(--gold-accent)" stroke-width="1.5"/>
+          <text x="17" y="24" text-anchor="middle" fill="var(--gold)" font-family="Georgia, serif" font-weight="bold" font-size="10" letter-spacing="0.5">SF</text>
+        </svg>
+        <div class="header-logo-text">
+          <span class="header-logo-name">STEVENS</span>
+          <span class="header-logo-sub">FAMILY</span>
+        </div>
+      </a>
+      <div class="header-controls">
+        <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" data-testid="theme-toggle" aria-label="Toggle theme"></button>
+        <div class="nav-wrapper">
+          <button class="nav-btn" onclick="toggleNav()" data-testid="menu-toggle" aria-label="Menu">
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><path d="M0 1h18M0 6h18M0 11h18" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <nav class="nav-dropdown" id="nav-dropdown" data-testid="nav-dropdown">
+            <a href="index.html">Home</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="photos.html">Photos</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="activities.html">Activities</a>
+            <a href="finance.html">Finance</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg" id="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-crest">
+        <svg width="120" height="145" viewBox="0 0 120 145" fill="none">
+          <path d="M60 6L8 32v52c0 34 22 56 52 64 30-8 52-30 52-64V32L60 6z" fill="var(--tips-bg)"/>
+          <path d="M60 6L8 32v52c0 34 22 56 52 64 30-8 52-30 52-64V32L60 6z" fill="none" stroke="var(--gold-accent)" stroke-width="3"/>
+          <text x="60" y="80" text-anchor="middle" fill="var(--gold)" font-family="Georgia, serif" font-weight="bold" font-size="40" letter-spacing="2">SF</text>
+          <line x1="40" y1="120" x2="80" y2="120" stroke="var(--gold-accent)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h1 class="hero-title">STEVENS</h1>
+      <div class="hero-subtitle">FAMILY</div>
+      <div class="hero-divider">
+        <div class="hero-divider-line"></div>
+        <div class="hero-divider-diamond"></div>
+        <div class="hero-divider-line"></div>
+      </div>
+      <p class="hero-tagline">God First · Family Always</p>
+    </div>
+  </section>
+
+  <!-- Dashboard -->
+  <main class="dashboard">
+    <p class="dashboard-label">Family Dashboard</p>
+    <div class="tile-grid" data-testid="dashboard-grid">
+
+      <a href="dinner.html" class="tile" data-testid="tile-dinner">
+        <div class="tile-glow"></div>
+        <img class="tile-icon" src="images/icon-dinner.svg" alt="">
+        <div><div class="tile-label">Dinner</div><div class="tile-sub">Tonight's plan</div></div>
+      </a>
+
+      <a href="calendar.html" class="tile" data-testid="tile-calendar">
+        <div class="tile-glow"></div>
+        <img class="tile-icon" src="images/icon-calendar.svg" alt="">
+        <div><div class="tile-label">Calendar</div><div class="tile-sub">Family schedule</div></div>
+      </a>
+
+      <a href="photos.html" class="tile" data-testid="tile-photos">
+        <div class="tile-glow"></div>
+        <img class="tile-icon" src="images/icon-photos.svg" alt="">
+        <div><div class="tile-label">Photos</div><div class="tile-sub">Family moments</div></div>
+      </a>
+
+      <a href="upload.html" class="tile" data-testid="tile-upload">
+        <div class="tile-glow"></div>
+        <img class="tile-icon" src="images/icon-upload.svg" alt="">
+        <div><div class="tile-label">Upload</div><div class="tile-sub">Add memories</div></div>
+      </a>
+
+      <a href="closet.html" class="tile" data-testid="tile-closet">
+        <div class="tile-glow"></div>
+        <img class="tile-icon" src="images/icon-closet.svg" alt="">
+        <div><div class="tile-label">Closet</div><div class="tile-sub">Plan your fit</div></div>
+      </a>
+
+      <a href="find.html" class="tile" data-testid="tile-find">
+        <div class="tile-glow"></div>
+        <img class="tile-icon" src="images/icon-search.svg" alt="">
+        <div><div class="tile-label">Find Items</div><div class="tile-sub">Locate anything</div></div>
+      </a>
+
+      <a href="recipes.html" class="tile" data-testid="tile-recipes">
+        <div class="tile-glow"></div>
+        <img class="tile-icon" src="images/icon-recipes.svg" alt="">
+        <div><div class="tile-label">Recipes</div><div class="tile-sub">Family kitchen</div></div>
+      </a>
+
+      <a href="activities.html" class="tile" data-testid="tile-activities">
+        <div class="tile-glow"></div>
+        <img class="tile-icon" src="images/icon-activities.svg" alt="">
+        <div><div class="tile-label">Activities</div><div class="tile-sub">Sports &amp; events</div></div>
+      </a>
+
+      <a href="finance.html" class="tile" data-testid="tile-finance">
+        <div class="tile-glow"></div>
+        <img class="tile-icon" src="images/icon-finance.svg" alt="">
+        <div><div class="tile-label">Finance</div><div class="tile-sub">Family budget</div></div>
+      </a>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-name">STEVENS</div>
+      <p class="footer-tagline">God First. Family Always.</p>
+      <p class="footer-domain">Our family home: <span>god-1st.com</span></p>
+      <p class="footer-copy">&copy; Stevens Family</p>
+    </footer>
+  </main>
+
+</body>
+</html>
