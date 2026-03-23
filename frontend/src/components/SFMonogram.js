@@ -19,15 +19,31 @@ export const SFMonogram = ({ size = 'md', withBorder = true, className = '' }) =
         className={`sf-monogram-box ${paddingSizes[size]} ${className}`}
         data-testid="sf-monogram"
       >
-        <span className={`sf-monogram ${sizes[size]}`}>SF</span>
+        <span 
+          className={`${sizes[size]}`}
+          style={{ 
+            fontFamily: "'Plus Jakarta Sans', sans-serif", 
+            fontWeight: 700, 
+            letterSpacing: '0.05em',
+            color: 'var(--text-primary)'
+          }}
+        >
+          SF
+        </span>
       </div>
     );
   }
 
   return (
     <span 
-      className={`sf-monogram ${sizes[size]} ${className}`}
+      className={`${sizes[size]} ${className}`}
       data-testid="sf-monogram"
+      style={{ 
+        fontFamily: "'Plus Jakarta Sans', sans-serif", 
+        fontWeight: 700, 
+        letterSpacing: '0.05em',
+        color: 'var(--text-primary)'
+      }}
     >
       SF
     </span>
