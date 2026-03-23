@@ -1,33 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Luxury Dark Theme - Primary Palette */
-  --bg-primary: #0B0C0F;
-  --bg-secondary: #111318;
-  --bg-card: #171A20;
+  /* Warm Dark Palette */
+  --bg-deep: #0D0D0F;
+  --bg-card: #16161A;
+  --bg-elevated: #1A1A1E;
   
-  /* Text Colors */
-  --text-primary: #F5F5F5;
-  --text-secondary: #A7AAB3;
-  --text-muted: #6B7280;
+  /* Warm Neutrals */
+  --cream: #F0EDE6;
+  --cream-muted: #D8D4CC;
+  --warm-gray: #908C84;
+  --warm-gray-dark: #58585C;
   
   /* Gold Accents */
-  --gold: #C6A85A;
-  --gold-soft: #E0C878;
-  --gold-dim: rgba(198, 168, 90, 0.15);
+  --gold: #C9B896;
+  --gold-muted: #8B7D5E;
   
-  /* Dividers & Borders */
-  --divider: rgba(255, 255, 255, 0.05);
-  --border-subtle: rgba(255, 255, 255, 0.08);
+  /* Borders */
+  --border: #232328;
+  --border-hover: #3D3830;
 }
 
 @layer base {
   * {
-    @apply border-[var(--divider)];
+    @apply border-[#232328];
   }
   
   html {
@@ -36,141 +36,32 @@
   }
   
   body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background-color: var(--bg-deep);
+    color: var(--cream);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    min-height: 100vh;
-    min-height: 100dvh;
-  }
-}
-
-@layer components {
-  .font-heading {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-  }
-  
-  .font-body {
-    font-family: 'Inter', sans-serif;
-  }
-  
-  /* Gold accent underline */
-  .gold-underline {
-    position: relative;
-  }
-  
-  .gold-underline::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 40px;
-    height: 2px;
-    background: linear-gradient(90deg, var(--gold), transparent);
-  }
-  
-  /* Luxury card styling */
-  .luxury-card {
-    background-color: var(--bg-card);
-    border-radius: 16px;
-    border: 1px solid var(--border-subtle);
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  }
-  
-  .luxury-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--gold);
-    box-shadow: 0 8px 32px rgba(198, 168, 90, 0.08);
-  }
-  
-  /* Gold glow effect */
-  .gold-glow {
-    box-shadow: 0 0 20px rgba(198, 168, 90, 0.15);
-  }
-  
-  /* SF Monogram */
-  .sf-monogram {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: var(--text-primary);
-  }
-  
-  .sf-monogram-box {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1.5px solid var(--gold);
-    border-radius: 6px;
-    padding: 4px 8px;
   }
 }
 
 @layer utilities {
-  .bg-primary {
-    background-color: var(--bg-primary);
-  }
-  
-  .bg-secondary {
-    background-color: var(--bg-secondary);
-  }
-  
-  .bg-card {
-    background-color: var(--bg-card);
-  }
-  
-  .text-primary {
-    color: var(--text-primary);
-  }
-  
-  .text-secondary {
-    color: var(--text-secondary);
-  }
-  
-  .text-muted {
-    color: var(--text-muted);
-  }
-  
-  .text-gold {
-    color: var(--gold);
-  }
-  
-  .border-gold {
-    border-color: var(--gold);
-  }
-  
-  .bg-gold {
-    background-color: var(--gold);
-  }
-  
-  .bg-gold-dim {
-    background-color: var(--gold-dim);
-  }
-  
-  /* Animation */
   .animate-fadeIn {
-    animation: fadeIn 0.4s ease-out;
+    animation: fadeIn 0.3s ease-out;
   }
   
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(12px);
+      transform: translateY(8px);
     }
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
-  
-  /* Smooth transitions */
-  .transition-luxury {
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  }
 }
 
-/* Custom scrollbar - subtle */
+/* Elegant scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -181,15 +72,15 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--text-muted);
+  background: #2A2A2E;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-secondary);
+  background: #3A3A3E;
 }
 
-/* PWA specific styles */
+/* PWA */
 @media (display-mode: standalone) {
   body {
     -webkit-user-select: none;
@@ -197,22 +88,14 @@
   }
 }
 
-/* Safe area for notched devices */
-@supports (padding: max(0px)) {
-  body {
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-  }
-}
-
 /* Focus states */
 *:focus-visible {
-  outline: 2px solid var(--gold);
+  outline: 1px solid var(--gold);
   outline-offset: 2px;
 }
 
 /* Selection */
 ::selection {
-  background-color: var(--gold-dim);
-  color: var(--text-primary);
+  background-color: rgba(201, 184, 150, 0.2);
+  color: var(--cream);
 }
