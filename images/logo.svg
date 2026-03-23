@@ -1,0 +1,6 @@
+<svg viewBox="0 0 200 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M100 10L12 52v86c0 56 36 92 88 106 52-14 88-50 88-106V52L100 10z" fill="#1A1A1E" stroke="#C9B896" stroke-width="5"/>
+  <path d="M100 28L30 62v70c0 44 28 72 70 82 42-10 70-38 70-82V62L100 28z" fill="none" stroke="#C9B896" stroke-width="1.2" opacity="0.3"/>
+  <text x="100" y="140" text-anchor="middle" fill="#C9B896" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="68" letter-spacing="3">SF</text>
+  <line x1="66" y1="198" x2="134" y2="198" stroke="#C9B896" stroke-width="3" stroke-linecap="round"/>
+</svg>
