@@ -41,7 +41,7 @@ document.addEventListener('click', function(e) {
 });
 
 // ========== HERO SLIDESHOW ==========
-var heroImages = ['images/hero-1.jpg', 'images/hero-2.jpg', 'images/hero-3.jpg'];
+var heroImages = ['images/hero-1.jpg', 'images/hero-2.jpg', 'images/hero-3.jpg', 'images/hero-4.jpg'];
 var heroIndex = 0;
 
 function rotateHero() {
