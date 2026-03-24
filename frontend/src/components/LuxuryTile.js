@@ -1,92 +1,99 @@
 import { Link } from 'react-router-dom';
 
-// Premium gold dashboard icons — thick strokes, semi-filled, high contrast
+// Premium duotone gold dashboard icons — bold filled, warm gold tones, 56px
 const iconStyle = "w-full h-full";
-const sw = "2"; // thick base stroke
 
 const IconDinner = ({ className }) => (
-  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`} stroke="currentColor" strokeWidth={sw}>
-    <circle cx="12" cy="13" r="7.5" fill="currentColor" fillOpacity="0.12" />
-    <path d="M9 7V4.5" strokeLinecap="round" />
-    <path d="M9 7v6.5c0 .8.6 1.5 1.4 1.5" strokeLinecap="round" />
-    <line x1="7" y1="10" x2="11" y2="10" strokeWidth="1.5" strokeLinecap="round" />
-    <path d="M15 7l.8 5.5c.1.9-.5 1.5-1.3 1.5" strokeLinecap="round" />
-    <path d="M15 7c1.2 0 1.5 1.5 1.5 3s-.5 2-1.5 2" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="10.5" y1="15" x2="10.5" y2="19" strokeLinecap="round" />
+  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`}>
+    <circle cx="12" cy="13" r="8.5" fill="currentColor" fillOpacity="0.18" />
+    <circle cx="12" cy="13" r="8.5" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.3" />
+    <path d="M8.5 5v4.5c0 1.2.8 2.2 2 2.4V18" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    <line x1="6.5" y1="8" x2="10.5" y2="8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    <path d="M15.5 5c1.8 0 2.2 2 2.2 4s-.6 3-2.2 3" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    <path d="M15.5 12v6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
   </svg>
 );
 
 const IconCalendar = ({ className }) => (
-  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`} stroke="currentColor" strokeWidth={sw}>
-    <rect x="3" y="5" width="18" height="16" rx="3" fill="currentColor" fillOpacity="0.12" />
-    <path d="M3 10h18" />
-    <path d="M8 2.5v4M16 2.5v4" strokeLinecap="round" />
-    <rect x="7" y="13" width="3.5" height="3.5" rx="0.75" fill="currentColor" stroke="none" />
-    <rect x="13" y="13" width="3.5" height="3.5" rx="0.75" fill="currentColor" fillOpacity="0.35" stroke="none" />
+  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`}>
+    <rect x="2.5" y="4.5" width="19" height="17" rx="3.5" fill="currentColor" fillOpacity="0.18" />
+    <rect x="2.5" y="4.5" width="19" height="17" rx="3.5" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.3" />
+    <rect x="2.5" y="4.5" width="19" height="6" rx="3.5" fill="currentColor" fillOpacity="0.25" />
+    <path d="M3 10.5h18" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.2" />
+    <path d="M8 2.5v4M16 2.5v4" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    <rect x="6.5" y="13" width="4" height="4" rx="1.2" fill="currentColor" />
+    <rect x="13.5" y="13" width="4" height="4" rx="1.2" fill="currentColor" fillOpacity="0.35" />
   </svg>
 );
 
 const IconPhotos = ({ className }) => (
-  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`} stroke="currentColor" strokeWidth={sw}>
-    <rect x="3" y="5" width="18" height="14" rx="3" fill="currentColor" fillOpacity="0.12" />
-    <circle cx="9.5" cy="10.5" r="2" fill="currentColor" stroke="none" />
-    <path d="M3 17l4.5-4 3 2.5L15 11l6 6" strokeLinecap="round" strokeLinejoin="round" />
+  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`}>
+    <rect x="2.5" y="4.5" width="19" height="15" rx="3.5" fill="currentColor" fillOpacity="0.18" />
+    <rect x="2.5" y="4.5" width="19" height="15" rx="3.5" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.3" />
+    <circle cx="8.5" cy="9.5" r="2.5" fill="currentColor" />
+    <path d="M2.5 16.5l5-4.5 3.5 3L15.5 10l6 6.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
 const IconUpload = ({ className }) => (
-  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`} stroke="currentColor" strokeWidth={sw}>
-    <path d="M6.5 16C3.5 16 2 13.5 2.5 11c.4-2 2-3.5 4-3.5A7 7 0 0119 8.5c2 .5 3.5 2.5 3 4.5-.5 2-2.5 3-4.5 3H6.5z" fill="currentColor" fillOpacity="0.12" strokeLinejoin="round" />
-    <path d="M12 11v6" strokeWidth="2.5" strokeLinecap="round" />
-    <path d="M9 13.5L12 11l3 2.5" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`}>
+    <path d="M6 17C2.8 17 1.2 14.2 1.8 11.5 2.3 9.2 4.2 7.5 6.5 7.5A8 8 0 0119.5 8c2.2.4 4 2.8 3.3 5.2-.6 2.2-2.8 3.8-5 3.8H6z" fill="currentColor" fillOpacity="0.18" />
+    <path d="M6 17C2.8 17 1.2 14.2 1.8 11.5 2.3 9.2 4.2 7.5 6.5 7.5A8 8 0 0119.5 8c2.2.4 4 2.8 3.3 5.2-.6 2.2-2.8 3.8-5 3.8H6z" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.3" />
+    <path d="M12 10v7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+    <path d="M8.5 13L12 10l3.5 3" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
 const IconCloset = ({ className }) => (
-  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`} stroke="currentColor" strokeWidth={sw}>
-    <path d="M8.5 10C8.5 7 10 5 12 5s3.5 2 3.5 5" strokeLinecap="round" />
-    <path d="M6 10l6-3 6 3" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M12 7v-3" strokeLinecap="round" />
-    <circle cx="12" cy="3.5" r="1" fill="currentColor" stroke="none" />
-    <rect x="7" y="13" width="10" height="8" rx="2" fill="currentColor" fillOpacity="0.12" />
-    <line x1="12" y1="13" x2="12" y2="21" strokeWidth="1.5" opacity="0.35" />
+  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`}>
+    <rect x="5.5" y="11.5" width="13" height="10" rx="2.5" fill="currentColor" fillOpacity="0.18" />
+    <rect x="5.5" y="11.5" width="13" height="10" rx="2.5" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.3" />
+    <line x1="12" y1="11.5" x2="12" y2="21.5" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.2" />
+    <path d="M8 10C8 6.5 9.8 4 12 4s4 2.5 4 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    <path d="M5.5 10l6.5-3.5L18.5 10" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="12" cy="3" r="1.5" fill="currentColor" />
   </svg>
 );
 
 const IconSearch = ({ className }) => (
-  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`} stroke="currentColor" strokeWidth={sw}>
-    <circle cx="10.5" cy="10.5" r="5.5" fill="currentColor" fillOpacity="0.12" />
-    <circle cx="10.5" cy="10.5" r="2" fill="currentColor" fillOpacity="0.25" stroke="none" />
-    <path d="M15 15l5.5 5.5" strokeWidth="2.5" strokeLinecap="round" />
+  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`}>
+    <circle cx="10" cy="10" r="7" fill="currentColor" fillOpacity="0.18" />
+    <circle cx="10" cy="10" r="7" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.3" />
+    <circle cx="10" cy="10" r="3" fill="currentColor" fillOpacity="0.3" />
+    <path d="M15.5 15.5L21 21" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" />
   </svg>
 );
 
 const IconRecipes = ({ className }) => (
-  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`} stroke="currentColor" strokeWidth={sw}>
-    <rect x="4" y="3" width="16" height="18" rx="3" fill="currentColor" fillOpacity="0.12" />
-    <path d="M8 8h8" strokeLinecap="round" />
-    <path d="M8 12h5" strokeLinecap="round" />
-    <path d="M8 16h3" strokeLinecap="round" />
-    <circle cx="16.5" cy="14.5" r="1.25" fill="currentColor" stroke="none" />
+  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`}>
+    <rect x="3.5" y="2.5" width="17" height="19" rx="3.5" fill="currentColor" fillOpacity="0.18" />
+    <rect x="3.5" y="2.5" width="17" height="19" rx="3.5" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.3" />
+    <rect x="3.5" y="2.5" width="17" height="5.5" rx="3.5" fill="currentColor" fillOpacity="0.2" />
+    <path d="M7.5 11.5h9" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    <path d="M7.5 15h6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    <path d="M7.5 18.5h3.5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
   </svg>
 );
 
 const IconActivities = ({ className }) => (
-  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`} stroke="currentColor" strokeWidth={sw}>
-    <circle cx="16" cy="6.5" r="3.5" fill="currentColor" fillOpacity="0.12" />
-    <circle cx="7" cy="6" r="2.5" fill="currentColor" fillOpacity="0.12" />
-    <path d="M7 8.5v5l3.5 4.5" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M7 13l-3.5 3.5" strokeLinecap="round" />
-    <path d="M10.5 18l2.5-2" strokeLinecap="round" />
+  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`}>
+    <circle cx="16.5" cy="5.5" r="4" fill="currentColor" fillOpacity="0.18" />
+    <circle cx="16.5" cy="5.5" r="4" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.3" />
+    <circle cx="7" cy="5.5" r="3" fill="currentColor" fillOpacity="0.18" />
+    <circle cx="7" cy="5.5" r="3" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.3" />
+    <path d="M7 8.5v6l4 5" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M7 14l-4 4" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    <path d="M11 19.5l3-2.5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
   </svg>
 );
 
 const IconFinance = ({ className }) => (
-  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`} stroke="currentColor" strokeWidth={sw}>
-    <rect x="3" y="4" width="18" height="16" rx="3" fill="currentColor" fillOpacity="0.12" />
-    <path d="M3 14l5-4 4 3 4-5 5 4" strokeLinecap="round" strokeLinejoin="round" />
-    <circle cx="18" cy="8" r="1.25" fill="currentColor" stroke="none" />
-    <path d="M3 20h18" strokeLinecap="round" />
+  <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`}>
+    <rect x="2.5" y="3.5" width="19" height="17" rx="3.5" fill="currentColor" fillOpacity="0.18" />
+    <rect x="2.5" y="3.5" width="19" height="17" rx="3.5" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.3" />
+    <path d="M2.5 15l5.5-5 4 3.5 4-5.5 5.5 5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="19" cy="7" r="1.8" fill="currentColor" />
+    <path d="M2.5 20.5h19" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.2" />
   </svg>
 );
 
@@ -138,25 +145,21 @@ export const LuxuryTile = ({
     >
       {/* Gold glow on hover */}
       <div 
-        className="absolute -top-20 -right-20 w-48 h-48 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+        className="absolute -top-16 -right-16 w-44 h-44 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
         style={{
-          background: 'radial-gradient(circle, rgba(212,175,55,0.12) 0%, transparent 60%)'
+          background: 'radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 60%)'
         }}
       />
       
-      {/* Icon in container */}
-      <div className="relative w-10 h-10 md:w-11 md:h-11 p-1.5 rounded-[10px] bg-gradient-to-br from-[#D4AF37]/[0.08] to-[#D4AF37]/[0.02] border border-[#D4AF37]/10 dark:from-[#D4AF37]/[0.1] dark:to-[#D4AF37]/[0.03] dark:border-[#D4AF37]/[0.15] transition-all duration-400 group-hover:border-[#D4AF37]/35 dark:group-hover:border-[#D4AF37]/45 group-hover:shadow-[0_2px_10px_rgba(212,175,55,0.1)] dark:group-hover:shadow-[0_2px_12px_rgba(212,175,55,0.15),0_0_20px_rgba(212,175,55,0.06)]">
-        {IconComponent && (
-          <IconComponent 
-            className="text-[#D4AF37] dark:text-[#D4AF37] transition-all duration-500 group-hover:text-[#D4AF37] dark:group-hover:text-[#F1D27A] group-hover:scale-110 dark:group-hover:drop-shadow-[0_0_3px_rgba(212,175,55,0.25)]"
-          />
-        )}
+      {/* Duotone icon — 56px */}
+      <div className="relative w-14 h-14 text-[#D4AF37] dark:text-[#D4AF37] transition-all duration-500 group-hover:text-[#C5981A] dark:group-hover:text-[#F1D27A] group-hover:scale-110 dark:group-hover:drop-shadow-[0_0_6px_rgba(212,175,55,0.3)]">
+        {IconComponent && <IconComponent className="" />}
       </div>
       
       {/* Text */}
       <div className="mt-auto">
         <h3 
-          className="font-medium text-[15px] tracking-tight transition-colors duration-300 
+          className="font-semibold text-[15px] tracking-tight transition-colors duration-300 
             text-[#3D3D3D] dark:text-[#D8D8DC] 
             group-hover:text-[#1A1A1A] dark:group-hover:text-white"
           style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}
