@@ -5,12 +5,12 @@ const iconStyle = "w-full h-full";
 
 const IconDinner = ({ className }) => (
   <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`}>
-    <circle cx="12" cy="13" r="8.5" fill="currentColor" fillOpacity="0.18" />
-    <circle cx="12" cy="13" r="8.5" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.3" />
-    <path d="M8.5 5v4.5c0 1.2.8 2.2 2 2.4V18" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-    <line x1="6.5" y1="8" x2="10.5" y2="8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    <path d="M15.5 5c1.8 0 2.2 2 2.2 4s-.6 3-2.2 3" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-    <path d="M15.5 12v6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    <ellipse cx="12" cy="14" rx="9" ry="7.5" fill="currentColor" fillOpacity="0.18" />
+    <ellipse cx="12" cy="14" rx="9" ry="7.5" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.3" />
+    <ellipse cx="12" cy="14" rx="5.5" ry="4" fill="currentColor" fillOpacity="0.12" />
+    <path d="M5.5 3v5.5a1.5 1.5 0 003 0V3" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    <path d="M7 8.5v4" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    <path d="M17 3v2.5c0 1.5-1 2.5-2 2.5h0c1 0 2 1 2 2.5V13" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
   </svg>
 );
 
@@ -46,12 +46,13 @@ const IconUpload = ({ className }) => (
 
 const IconCloset = ({ className }) => (
   <svg viewBox="0 0 24 24" fill="none" className={`${iconStyle} ${className}`}>
-    <rect x="5.5" y="11.5" width="13" height="10" rx="2.5" fill="currentColor" fillOpacity="0.18" />
-    <rect x="5.5" y="11.5" width="13" height="10" rx="2.5" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.3" />
-    <line x1="12" y1="11.5" x2="12" y2="21.5" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.2" />
-    <path d="M8 10C8 6.5 9.8 4 12 4s4 2.5 4 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-    <path d="M5.5 10l6.5-3.5L18.5 10" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-    <circle cx="12" cy="3" r="1.5" fill="currentColor" />
+    <rect x="4" y="10" width="16" height="12" rx="3" fill="currentColor" fillOpacity="0.18" />
+    <rect x="4" y="10" width="16" height="12" rx="3" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.3" />
+    <line x1="12" y1="10" x2="12" y2="22" stroke="currentColor" strokeWidth="1.2" strokeOpacity="0.15" />
+    <path d="M12 3v2" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    <path d="M12 5L6 10h12L12 5z" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+    <circle cx="10" cy="16" r="1" fill="currentColor" />
+    <circle cx="14" cy="16" r="1" fill="currentColor" />
   </svg>
 );
 
