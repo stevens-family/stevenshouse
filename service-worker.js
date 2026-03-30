@@ -1,4 +1,4 @@
-var CACHE_NAME = 'stevens-family-v1';
+var CACHE_NAME = 'stevens-family-v2';
 var URLS_TO_CACHE = [
   './',
   './index.html',
