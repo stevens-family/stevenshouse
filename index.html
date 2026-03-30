@@ -93,10 +93,14 @@
         <div><div class="tile-label">Calendar</div><div class="tile-sub">Family Schedule</div></div>
       </a>
 
-     <a class="tile" data-testid="tile-chat" href="https://chat.google.com/room/AAQAhjjA36I?cls=7" target="_blank" rel="noopener">
-        <div class="tile-glow"></div>
-        <img class="tile-icon" src="images/icon-chat.svg" alt="">
-        <div><div class="tile-label">Chat</div><div class="tile-sub">Stevens Chat</div></div>
+       <a class="tile" data-testid="tile-chat" href="https://chat.google.com/room/AAQAhjjA36I?cls=7"
+      onclick="if (window.fully) { fully.startApplication('com.google.android.apps.dynamite'); return false; }">
+      <div class="tile-glow"></div>
+      <img class="tile-icon" src="images/icon-chat.svg" alt="">
+      <div>
+        <div class="tile-label">Chat</div>
+        <div class="tile-sub">Our Chat</div>
+      </div>
       </a>
  
       <a href="upload.html" class="tile" data-testid="tile-upload">
