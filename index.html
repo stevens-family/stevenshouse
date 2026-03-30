@@ -42,7 +42,8 @@
             <a href="index.html">Home</a>
             <a href="dinner.html">Dinner</a>
             <a href="calendar.html">Calendar</a>
-            <a href="https://chat.google.com/room/AAQAhjjA36I?cls=7" target="_blank" rel="noopener">Stevens Chat</a>
+            <a href="https://chat.google.com/room/AAQAhjjA36I?cls=7" target="_blank" rel="noopener">Chat</a>
+            <a href="https://zello.com" target="_blank" rel="noopener">Intercom</a>
             <a href="upload.html">Upload Photos</a>
             <a href="closet.html">ACloset</a>
             <a href="finance.html">Finance</a>
@@ -84,24 +85,39 @@
       <a href="dinner.html" class="tile" data-testid="tile-dinner">
         <div class="tile-glow"></div>
         <img class="tile-icon" src="images/icon-dinner.svg" alt="">
-        <div><div class="tile-label">Dinner</div><div class="tile-sub">Tonight's Plan</div></div>
+        <div><div class="tile-label">Dinner</div><div class="tile-sub">Dinner Tonight</div></div>
       </a>
 
-      <a href="calendar.html" class="tile" data-testid="tile-calendar">
-        <div class="tile-glow"></div>
-        <img class="tile-icon" src="images/icon-calendar.svg" alt="">
-        <div><div class="tile-label">Calendar</div><div class="tile-sub">Family Schedule</div></div>
-      </a>
-
+ 
+    <a class="tile" data-testid="tile-calendar" href="https://calendar.google.com/calendar/u/0/r"
+      onclick="if (window.fully) { fully.startApplication('com.google.android.calendar'); return false; }">
+    <div class="tile-glow"></div>
+    <img class="tile-icon" src="images/icon-calendar.svg" alt="">
+    <div>
+        <div class="tile-label">Calendar</div>
+        <div class="tile-sub">Schedule</div>
+    </div>
+  </a>
+      
        <a class="tile" data-testid="tile-chat" href="https://chat.google.com/room/AAQAhjjA36I?cls=7"
-      onclick="if (window.fully) { fully.startApplication('com.google.android.apps.dynamite'); return false; }">
+          onclick="if (window.fully) { fully.startApplication('com.google.android.apps.dynamite'); return false; }">
       <div class="tile-glow"></div>
       <img class="tile-icon" src="images/icon-chat.svg" alt="">
       <div>
         <div class="tile-label">Chat</div>
-        <div class="tile-sub">Our Chat</div>
+        <div class="tile-sub">Stevens Chat</div>
       </div>
       </a>
+
+      <a class="tile" data-testid="tile-zello" href="https://zello.com/"
+        onclick="if (window.fully) { fully.startApplication('com.loudtalks'); return false; }">
+      <div class="tile-glow"></div>
+      <img class="tile-icon" src="images/icon-zello.svg" alt="">
+      <div>
+        <div class="tile-label">Intercom</div>
+        <div class="tile-sub">Walkie Talkie</div>
+    </div>
+    </a>
  
       <a href="upload.html" class="tile" data-testid="tile-upload">
         <div class="tile-glow"></div>
@@ -109,12 +125,18 @@
         <div><div class="tile-label">Upload</div><div class="tile-sub">Add Memories</div></div>
       </a>
 
-      <a href="https://apps.apple.com/us/app/acloset-ai-fashion-assistant/id1542311809" class="tile" data-testid="tile-closet">
-        <div class="tile-glow"></div>
-        <img class="tile-icon" src="images/icon-closet.svg" alt="">
-        <div><div class="tile-label">Closet</div><div class="tile-sub">Plan Your Fit!</div></div>
-      </a>
+    
+      <a class="tile" data-testid="tile-acloset" href="https://www.acloset.app/"
+      onclick="if (window.fully) { fully.startApplication('com.looko.acloset'); return false; }">
+      <div class="tile-glow"></div>
+      <img class="tile-icon" src="images/icon-acloset.svg" alt="">
+      <div>
+        <div class="tile-label">ACloset</div>
+        <div class="tile-sub">Wardrobe</div>
+    </div>
+    </a>
 
+      
        <a href="recipes.html" class="tile" data-testid="tile-recipes">
         <div class="tile-glow"></div>
         <img class="tile-icon" src="images/icon-recipes.svg" alt="">
