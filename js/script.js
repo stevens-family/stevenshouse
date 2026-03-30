@@ -84,11 +84,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// ========== PWA ==========
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('service-worker.js')
-      .then(function(reg) { console.log('SW registered:', reg.scope); })
-      .catch(function(err) { console.log('SW registration failed:', err); });
-  });
-}
+// ========== PWA (TEMP DISABLED DURING DEVELOPMENT) ==========
+//if ('serviceWorker' in navigator) {
+//  window.addEventListener('load', function() {
+//    navigator.serviceWorker.register('service-worker.js')
+//      .then(function(reg) { console.log('SW registered:', reg.scope); })
+//      .catch(function(err) { console.log('SW registration failed:', err); });
+//  });
+//}
