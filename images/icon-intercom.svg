@@ -1,8 +1,9 @@
-  <a href="index.html">Home</a>
-            <a href="dinner.html">Dinner</a>
-            <a href="calendar.html">Calendar</a>
-            <a href="https://chat.google.com/room/AAQAhjjA36I?cls=7" target="_blank" rel="noopener">Chat</a>
-            <a href="https://zello.com" target="_blank" rel="noopener">Intercom</a>
-            <a href="upload.html">Upload Photos</a>
-            <a href="closet.html">ACloset</a>
-            <a href="finance.html">Finance</a>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <rect x="5" y="3" width="14" height="18" rx="3" stroke="#C6A85B" stroke-width="1.8"/>
+  <circle cx="12" cy="8" r="1.5" fill="#C6A85B"/>
+  <path d="M8.5 12.5c1.2-1.2 2.3-1.8 3.5-1.8s2.3.6 3.5 1.8" 
+        stroke="#C6A85B" 
+        stroke-width="1.8" 
+        stroke-linecap="round"/>
+  <circle cx="12" cy="16.5" r="1.8" stroke="#C6A85B" stroke-width="1.8"/>
+</svg>
